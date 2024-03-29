@@ -1,6 +1,11 @@
 ---
 ---
-
+html{
+  background-color:#000000;
+}
+h1 {
+  font-size:100px;
+}
 @import "{{ site.theme }}";
 html{
   background-color:#000000;
