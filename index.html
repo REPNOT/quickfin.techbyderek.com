@@ -1,40 +1,625 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Docs</title>
-    <link href="https://repnot.github.io/main/assets/css/style.scss" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Quick Fin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
     <style>
-      html{
-        background-color:#000000;
+
+      html {
+        background-color: #000000;
       }
+
+      nav {
+        background-color: rgba(4, 96, 217, 1);
+        width:100%;
+        margin-bottom: 1.5em;
+        box-shadow: rgba(4, 96, 217, 0.4) 0px 5px, rgba(4, 96, 217, 0.3) 0px 10px, rgba(4, 96, 217, 0.2) 0px 15px;
+      }
+
+      .uk-navbar-center-left {
+        margin-left:1.5em;
+        margin-right:1.5em;
+      }
+
+      .uk-navbar-center-right {
+        margin-left:1.5em;
+        margin-right:1.5em;
+      }
+
       h1 {
-        font-size:100px;
+        margin-top: .25em;
+        font-weight: bold;
+        color:#ffffff;
+        font-size: 35px;
       }
+
+      h3 {
+        margin-top: .75em;
+        font-weight: bold;
+        color:#ffffff;
+        font-size: 20px;
+        margin-left:.75em;
+        margin-right:.75em;
+      }
+
+      #footer-logo {
+        padding-left: 0;
+        padding-right: 0;
+        text-align:center;
+      }
+
+      li {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+      }
+
+      hr {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        padding-left:3em;
+        padding-right:3em;
+      }
+
+      section {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        padding-left:3em;
+        padding-right:3em;
+      }
+
+      article {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        padding-left:3em;
+        padding-right:3em;
+      }
+
+      #main-title {
+        margin-bottom: 2em;
+        text-align: center;
+      }
+
+      img {
+        height: auto;
+        width:25%;
+      }
+
+      #footer {
+        background-color: rgba(4, 96, 217, 1);
+        height:100px;
+      }
+
+      #top-hr {
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+      }
+
+      #bottom-hr {
+        padding-top: 2em;
+      }
+
+      .card-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5em;
+        margin-bottom: 2.5em;
+        border-radius: 5px;
+      }
+
+      #code-group {
+
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+        padding-bottom: .25em;
+        margin-bottom:2.5em;
+
+        #code-group-header-container {
+
+          padding-bottom: .25em;
+          max-width: 1200px;
+
+          #code-group-container {
+
+            padding-top: .25em;
+            max-width: 1000px;
+            margin-bottom: .5em;
+            padding-left: 2.25em;
+            padding-right: 2.25em;
+
+            #code-card {
+
+              background-color: rgba(0, 0, 0);
+              padding-top: .5em;
+              padding-bottom: .5em;
+              color: rgba(255, 255, 255);
+              box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.3) 15px 15px;
+              border-radius: 5px;
+              text-align: left;
+
+              pre {
+                white-space: pre-wrap;
+                background-color: #000000;
+                border: 0;
+                color: #ffffff;
+                font-size: 17.5px;
+                text-align: left;
+              }
+            }
+          }
+
+          #code-header {
+
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: rgba(4, 96, 217);
+            padding-top: .5em;
+            padding-bottom: .5em;
+            color: rgba(255, 255, 255);
+            font-weight: bold;
+            font-size: 20px;
+            max-width: 1200px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+            #code-group-header-text {
+              font-weight: bold;
+              font-size: 30px;
+              color: rgba(255, 255, 255);
+              text-align: center;
+              margin-top: 0;
+              padding-top: 0;
+            }
+
+          }
+          #card-body-text {
+            padding-left:2.25em;
+            padding-right:2.25em;
+            h4 {
+              margin-top:1.5em;
+              margin-bottom:2em;
+              color:#000000;
+              font-weight:600;
+              font-size:20px;
+            }
+          }
+        }
+      }
+
+      #grid-four-center-light {
+        margin-bottom:2em;
+        padding:1.5em;
+        border-radius: 5px;
+        background-color: #ffffff;
+        max-width: 600px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      #grid-four-wide-light {
+        margin-bottom:2em;
+        padding:1em;
+        border-radius: 5px;
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      #grid-four-left-light {
+        margin-bottom:2em;
+        margin-left:1em;
+        margin-right:1em;
+        padding:1.5em;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+
+      #grid-four-right-light {
+        margin-bottom:2em;
+        margin-left:1em;
+        margin-right:1em;
+        padding:1.5em;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+
+      #grid-four-left-dark {
+        margin-bottom:2em;
+        margin-left:1em;
+        margin-right:1em;
+        padding:1.5em;
+        border-radius: 5px;
+        background-color: #000000;
+      }
+
+      #grid-four-right-dark {
+        margin-bottom:2em;
+        margin-left:1em;
+        margin-right:1em;
+        padding:1.5em;
+        border-radius: 5px;
+        background-color: #000000;
+      }
+
+      #single-card-wide-dark-container {
+
+        padding-bottom:0em;
+        padding-top:0em;
+        margin-bottom:0em;
+        margin-top:0em;
+        max-width: 1200px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+          background-color: #000000;
+          
+          h2 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      #single-card-centered-white-container {
+
+          padding:0;
+          margin:0;
+          max-width: 600px;
+
+          .uk-card {
+
+            border-radius: 5px;
+            box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+
+            h2 {
+              color:#000000;
+              font-weight:600;
+              font-size:40px;
+              margin-top:0;
+              padding-top:0;
+              margin-bottom:0;
+            }
+
+            h4 {
+              color:#000000;
+              font-weight:600;
+              font-size:20px;
+            }
+          }
+      }
+
+      #single-card-centered-dark-container {
+
+        padding:0;
+        margin:0;
+        max-width: 600px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+          background-color: #000000;
+
+          h2 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      #single-card-centered-white {
+
+        padding-top:0;
+        max-width: 600px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+
+          h2 {
+            color:#000000;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#000000;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      #single-card-wide-white {
+        
+        padding-top:0;
+        max-width: 1200px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+
+          h2 {
+            color:#000000;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#000000;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      #single-card-centered-dark {
+
+        padding-top:0;
+        max-width: 600px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+          background-color: #000000;
+
+          h2 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      #single-card-wide-dark {
+
+        padding-top:0;
+        max-width: 1200px;
+
+        .uk-card {
+
+          border-radius: 5px;
+          box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
+          background-color: #000000;
+          
+          h2 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:40px;
+            margin-top:0;
+            padding-top:0;
+            margin-bottom:0;
+          }
+
+          h4 {
+            color:#ffffff;
+            font-weight:600;
+            font-size:20px;
+          }
+        }
+      }
+
+      .uk-navbar-center {
+        text-align: center;
+      }
+
+
     </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Page 1</a>
-          <a class="nav-link" href="#">Page 2</a>
+      <header>
+        <nav class="uk-navbar-container-stretch">
+          <div class="uk-container">
+            <div uk-navbar>
+              <div class="uk-navbar-center">
+
+                <!-- <div class="uk-navbar-center-left">
+                  <h3><a class="uk-link-text" id="button-link" href="#">Home</a></h3>
+                  <h3><a class="uk-link-text" id="button-link" href="#">Examples</a></h3>
+                </div> -->
+
+                <h1>
+                  <a class="uk-link-text" id="button-link-logo" href="https://pypi.org/project/quickfin/" target="_blank">
+                    Quick Fin
+                  </a>
+                </h1>
+
+                <!-- <div class="uk-navbar-center-right">
+                  <h3><a class="uk-link-text" id="button-link" href="#">Data</a></h3>
+                  <h3><a class="uk-link-text" id="button-link" href="#">Changelog</a></h3>
+                </div> -->
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section>
+
+        <div id="single-card-wide-dark" class="card-container">
+          <div class="uk-card uk-card-default uk-card uk-card-body">
+            <div id="main-title">
+              <h2 class="uk-card-title">Quick Fin</h2>
+            </div>
+
+            <article>
+              <div id="grid-four-wide-light" class="uk-tile uk-tile-default">
+                <div id="single-card-wide-dark-container" class="card-container">
+                  <div class="uk-card uk-card-default uk-card uk-card-body">
+                    <h2 class="uk-card-title">Description</h2>
+                    <h4>
+                      A Python module providing instant access to live
+                      and historical stock market price data, automated
+                      Plotly data visualization generators and a metadata
+                      catalog for referencing equities, stock symbols, sectors,
+                      and industry information.
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+
+            <article>
+              <div id="code-group">
+                <div id="code-group-header-container" class="card-container">
+                  <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                    <h1 id="code-group-header-text">Installation</h1>
+                  </div>
+                  <div id="card-body-text">
+                    <h4>
+                      Open a terminal and run:
+                    </h4>
+                  </div>
+                  <div id="code-group-container" class="card-container">
+                    <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+pip install quickfin
+</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <div id="code-group">
+                <div id="code-group-header-container" class="card-container">
+                  <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                    <h1 id="code-group-header-text">Quickstart</h1>
+                  </div>
+                  <div id="card-body-text">
+                    <h4>
+                      Retreive a data payload containing the
+                      most recent stock price data available
+                      for the stock symbol passed to the `symbol`
+                      parameter.  Method will return live market
+                      price quotes during trading hours.
+                    </h4>
+                  </div>
+                  <div id="code-group-container" class="card-container">
+                    <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+from quickfin import *
+
+price_data = PriceData()
+
+print(price_data.current("SNOW"))
+</pre>
+                    </div>
+                    <div id="card-body-text">
+                      <h4>
+                        Output:
+                      </h4>
+                    </div>
+                    <div id="code-group-container" class="card-container">
+                      <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+  <pre>
+{
+  'current': {
+    'Adj Close': 161.6,
+    'Change Amount': 2.42,
+    'Change Rate': 0.01,
+    'Close': 161.6,
+    'Date': '2024-03-28',
+    'Day Range': 4.89,
+    'High': 165.89,
+    'Low': 161.0,
+    'Open': 164.02,
+    'Volume': 10106900
+  },
+  'info': {
+    'industry': 'Software - Application',
+    'name': 'Snowflake Inc.',
+    'sector': 'Technology',
+    'symbol': 'SNOW'
+  }
+}
+  </pre>
+                      </div>
+  
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
-      </div>
-    </div>
-  </nav>
-    <h1>Welcome!</h1>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </section>
+
+
+      <footer>
+          <nav id="footer"  class="uk-navbar-container" uk-sticky="position: bottom">
+            <div class="uk-container">
+              <div uk-navbar>
+                <div class="uk-navbar-center">
+  
+                  <div class="uk-navbar-center">
+
+                    <a class="uk-link-text" href="https://www.techbyderek.com" target="_blank">
+                      <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/f579d38e59a2a1c6b1ed5d6d33012d624abdc9eb/D%2520LOGO%2520WHITE%2520-%2520360%2520-%2520NO%2520BG.png">
+                    </a>
+
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </nav>
+      </footer>
+
   </body>
 </html>
-
