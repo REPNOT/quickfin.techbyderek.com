@@ -16,7 +16,7 @@
         width: 100%;
         box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
         border-radius: 5px;
-        border: 5px solid #000000
+        border: 2px solid #000000
       }
 
       #main-title {
@@ -1240,7 +1240,7 @@ print(data)
         </article>
 
 
-        <!-- ===   PriceData Class - Candlestick Method   === -->
+        <!-- ===   PriceData Class - Candlestick Method  === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -1260,14 +1260,6 @@ print(data)
                   Executing this method will automatically
                   open the data visualization in the 
                   default web browser.
-          
-                  <br><br>
-
-                  <strong>PAYLOAD CONTENTS:</strong>
-
-                  <br><br>
-          
-                  Plotly Visualization
                 </h4>
               </div>
               <div id="code-group-container" class="card-container">
@@ -1292,6 +1284,72 @@ print(data)
           </div>
         </article>
 
+        <!-- ===   PriceData Class - Line Method   === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">line(symbol, days, param)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `line` method is used to
+                  generate a Plotly Line plot for the 
+                  most recent total number of days 
+                  represented by the value passed to 
+                  the `days` parameter for the specified 
+                  data column passed to the `param` parameter.
+          
+                  <br><br>
+
+                  Executing this method will automatically
+                  open the data visualization in the 
+                  default web browser.
+
+                  <br><br>
+
+                  <strong>`param` OPTIONS:</strong>
+
+                  <br><br>
+          
+                      - Change Amount
+                      <br>
+                      - Change Rate
+                      <br>
+                      - Day Range
+                      <br>
+                      - Volume
+                      <br>
+                      - Adj Close
+                      <br>
+                      - Close
+                      <br>
+                      - Low
+                      <br>
+                      - High
+                      <br>
+                      - Open
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.line("F", 25, "Close")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+
+
+                  <img class="image" alt="Candlestick Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/fe9df339cd7a1c6b812486756389345f400d6c87/Line%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History%2520-%2520Closing%2520Prices.jpg" width="100%" height="100%">
+
+            </div>
+          </div>
+        </article>
         
 
       </section>
