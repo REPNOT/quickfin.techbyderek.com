@@ -1571,6 +1571,65 @@ print(data)
         </article>
 
 
+        <!-- ===   FinInfo Class - Sector Industries Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">sector_industries(sector)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `sector_industries` method is used to retrieve a
+                  data payload containing a list of all industries
+                  belonging to the sector passed to the `sector` parameter. 
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of strings.
+          
+                  By default, the return value will include an 
+                  object containing all sectors and associated industries.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.sector_industries("technology")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  'Communication Equipment',
+  'Consumer Electronics',
+  'Software - Infrastructure',
+  'Semiconductor Equipment & Materials',
+  'Information Technology Services',
+  'Software - Application',
+  'Semiconductors',
+  'Computer Hardware',
+  'Electronic Components',
+  'Solar',
+  'Electronics & Computer Distribution',
+  'Scientific & Technical Instruments'
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
 
 
       </section>
