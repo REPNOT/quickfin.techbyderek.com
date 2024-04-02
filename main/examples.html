@@ -1284,6 +1284,7 @@ print(data)
           </div>
         </article>
 
+
         <!-- ===   PriceData Class - Line Method   === -->
         <article>
           <div id="code-group">
@@ -1345,12 +1346,54 @@ print(data)
                   <h6>Output:</h6>
 
 
-                  <img class="image" alt="Candlestick Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/fe9df339cd7a1c6b812486756389345f400d6c87/Line%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History%2520-%2520Closing%2520Prices.jpg" width="100%" height="100%">
+                  <img class="image" alt="Line Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/fe9df339cd7a1c6b812486756389345f400d6c87/Line%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History%2520-%2520Closing%2520Prices.jpg" width="100%" height="100%">
 
             </div>
           </div>
         </article>
-        
+
+
+        <!-- ===   PriceData Class - Table Method   === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">table(symbol, days)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `line` method is used to
+                  generate a Plotly Table for the most 
+                  recent total number of days represented by 
+                  the value passed to the `days` parameter.
+          
+                  <br><br>
+
+                  Executing this method will automatically
+                  open the data visualization in the 
+                  default web browser.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.table("F", 25)
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+
+
+                  <img class="image" alt="Table Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/1970a59183e59e92f82039cbbd6b0fad6946fefd/Table%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History.jpg" width="100%" height="100%">
+
+            </div>
+          </div>
+        </article>
+
 
       </section>
 
