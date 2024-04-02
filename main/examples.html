@@ -1515,6 +1515,62 @@ print(data)
         </article>
 
 
+        <!-- ===   FinInfo Class - Sectors Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">sectors(payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `sectors` method is used to retrieve a
+                  data payload containing a list of all sectors 
+                  available in the metadata catalog.
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of strings.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.sectors()
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  'Healthcare',
+  'Basic Materials',
+  'Consumer Defensive',
+  'Uncategorized',
+  'Financial Services',
+  'Industrials',
+  'Technology',
+  'Consumer Cyclical',
+  'Real Estate',
+  'Communication Services',
+  'Energy',
+  'Utilities'
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
 
 
       </section>
