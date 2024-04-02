@@ -8,26 +8,35 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
     <style>
-
       html {
         background-color: #000000;
       }
 
       nav {
         background-color: rgba(4, 96, 217, 1);
-        width:100%;
         margin-bottom: 1.5em;
         box-shadow: rgba(4, 96, 217, 0.4) 0px 5px, rgba(4, 96, 217, 0.3) 0px 10px, rgba(4, 96, 217, 0.2) 0px 15px;
+        max-width: 1400px;
       }
 
       .uk-navbar-center-left {
-        margin-left:1.5em;
-        margin-right:1.5em;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .uk-navbar-center-right {
-        margin-left:1.5em;
-        margin-right:1.5em;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      #grid-four {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1400px;
+      }
+
+      nav {
+        margin-bottom: 4em;
       }
 
       h1 {
@@ -40,10 +49,14 @@
       h3 {
         margin-top: .75em;
         font-weight: bold;
-        color:#ffffff;
+        color:#000000;
         font-size: 20px;
-        margin-left:.75em;
-        margin-right:.75em;
+      }
+
+      h6 {
+        font-weight:bold;
+        font-size:25px;
+        color:#000000;
       }
 
       #footer-logo {
@@ -60,30 +73,26 @@
       hr {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1200px;
-        padding-left:3em;
-        padding-right:3em;
+        max-width: 1600px;
+      }
+
+      .hr {
+        margin-bottom: 3em;
       }
 
       section {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1200px;
-        padding-left:3em;
-        padding-right:3em;
+        max-width: 1600px;
+        padding-left:2em;
+        padding-right:2em;
       }
 
       article {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1200px;
-        padding-left:3em;
-        padding-right:3em;
-      }
-
-      #main-title {
-        margin-bottom: 2em;
-        text-align: center;
+        max-width: 1600px;
+        margin-bottom: 4em;
       }
 
       img {
@@ -115,8 +124,6 @@
 
       #code-group {
 
-        margin-left: auto;
-        margin-right: auto;
         background-color: #ffffff;
         border-radius: 5px;
         box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
@@ -126,15 +133,13 @@
         #code-group-header-container {
 
           padding-bottom: .25em;
-          max-width: 1200px;
+          max-width: 1600px;
 
           #code-group-container {
 
             padding-top: .25em;
-            max-width: 1000px;
             margin-bottom: .5em;
-            padding-left: 2.25em;
-            padding-right: 2.25em;
+            width: 95%;
 
             #code-card {
 
@@ -152,7 +157,6 @@
                 border: 0;
                 color: #ffffff;
                 font-size: 17.5px;
-                text-align: left;
               }
             }
           }
@@ -169,8 +173,8 @@
             color: rgba(255, 255, 255);
             font-weight: bold;
             font-size: 20px;
-            max-width: 1200px;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
 
             #code-group-header-text {
               font-weight: bold;
@@ -183,9 +187,12 @@
 
           }
           #card-body-text {
-            padding-left:2.25em;
-            padding-right:2.25em;
+
+            margin-left: 2em;
+            width: 95%;
+
             h4 {
+
               margin-top:1.5em;
               margin-bottom:2em;
               color:#000000;
@@ -198,40 +205,44 @@
 
       #grid-four-center-light {
         margin-bottom:2em;
-        padding:1.5em;
         border-radius: 5px;
         background-color: #ffffff;
         max-width: 600px;
         margin-left:auto;
         margin-right:auto;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #grid-four-wide-light {
         margin-bottom:2em;
-        padding:1em;
         border-radius: 5px;
         background-color: #ffffff;
-        max-width: 1200px;
+        max-width: 1600px;
         margin-left:auto;
         margin-right:auto;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #grid-four-left-light {
         margin-bottom:2em;
-        margin-left:1em;
-        margin-right:1em;
-        padding:1.5em;
+        margin-left:1.25em;
+        margin-right:1.25em;
         border-radius: 5px;
         background-color: #ffffff;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #grid-four-right-light {
         margin-bottom:2em;
-        margin-left:1em;
-        margin-right:1em;
-        padding:1.5em;
+        margin-left:1.25em;
+        margin-right:1.25em;
         border-radius: 5px;
         background-color: #ffffff;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #grid-four-left-dark {
@@ -241,15 +252,19 @@
         padding:1.5em;
         border-radius: 5px;
         background-color: #000000;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #grid-four-right-dark {
         margin-bottom:2em;
-        margin-left:1em;
-        margin-right:1em;
+        margin-left:1.25em;
+        margin-right:1.25em;
         padding:1.5em;
         border-radius: 5px;
         background-color: #000000;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
       }
 
       #single-card-wide-dark-container {
@@ -258,7 +273,7 @@
         padding-top:0em;
         margin-bottom:0em;
         margin-top:0em;
-        max-width: 1200px;
+        max-width: 1600px;
 
         .uk-card {
 
@@ -370,7 +385,7 @@
       #single-card-wide-white {
         
         padding-top:0;
-        max-width: 1200px;
+        max-width: 1600px;
 
         .uk-card {
 
@@ -425,7 +440,7 @@
       #single-card-wide-dark {
 
         padding-top:0;
-        max-width: 1200px;
+        max-width: 1600px;
 
         .uk-card {
 
@@ -454,7 +469,9 @@
         text-align: center;
       }
 
-
+      .uk-navbar-toggle {
+        color:#ffffff;
+      }
     </style>
   </head>
   <body>
@@ -463,22 +480,30 @@
         <nav class="uk-navbar-container-stretch">
           <div class="uk-container">
             <div uk-navbar>
-              <div class="uk-navbar-center">
 
-                <div class="uk-navbar-center-left">
-                  <h3><a class="uk-link-text" id="button-link" href="https://quickfin.techbyderek.com/">Home</a></h3>
-                  <!-- <h3><a class="uk-link-text" id="button-link" href="#">Examples</a></h3> -->
+              <div class="uk-navbar-left">
+                <a class="uk-navbar-toggle" href="#">
+                  <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                </a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-active"><a class="uk-link-text" href="https://quickfin.techbyderek.com/">Home</a></li>
+                    <!-- <li class="uk-link"><a class="uk-link-text" href="#">Examples</a></li> -->
+                    <li class="uk-link"><a class="uk-link-text" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
+                    <!-- <li class="uk-link"><a class="uk-link-text" href="#">Changelog</a></li> -->
+                  </ul>
                 </div>
+              </div>
 
+              <div class="uk-navbar-center">
                 <h1>
-                  <a class="uk-link-text" id="button-link-logo" href="https://pypi.org/project/quickfin/" target="_blank">
+                  <a class="uk-link-text" id="button-link-logo" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank">
                     Quick Fin
                   </a>
                 </h1>
 
                 <div class="uk-navbar-center-right">
-                  <h3><a class="uk-link-text" id="button-link" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" target="_blank">Data</a></h3>
-                  <!-- <h3><a class="uk-link-text" id="button-link" href="#">Changelog</a></h3> -->
+
                 </div>
 
               </div>
@@ -488,70 +513,98 @@
       </header>
 
       <section>
-
-        <div id="single-card-wide-dark" class="card-container">
-          <div class="uk-card uk-card-default uk-card uk-card-body">
-            <div id="main-title">
-              <h2 class="uk-card-title">Quick Fin</h2>
+        <article>
+          <div id="single-card-wide-dark" class="card-container">
+            <div class="uk-card uk-card-default uk-card uk-card-body">
+              <h2 class="uk-card-title">Description</h2>
+              <h4>
+                Quickfin is a Python module providing instant access to live
+                and historical stock market price data, automated
+                Plotly data visualization generators and a metadata
+                catalog for referencing equities, stock symbols, sector,
+                and industry information.
+              </h4>
             </div>
+          </div>
+        </article>
+      </section>
 
-            <article>
-              <div id="grid-four-wide-light" class="uk-tile uk-tile-default">
-                <div id="single-card-wide-dark-container" class="card-container">
-                  <div class="uk-card uk-card-default uk-card uk-card-body">
-                    <h2 class="uk-card-title">Description</h2>
-                    <h4>
-                      A Python module providing instant access to live
-                      and historical stock market price data, automated
-                      Plotly data visualization generators and a metadata
-                      catalog for referencing equities, stock symbols, sectors,
-                      and industry information.
-                    </h4>
-                  </div>
-                </div>
+      <section>
+
+        <div class="hr">
+          <hr id="top-div" class="uk-divider-icon">
+        </div>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">Installation</h1>
               </div>
-            </article>
-
-
-            <article>
-              <div id="code-group">
-                <div id="code-group-header-container" class="card-container">
-                  <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                    <h1 id="code-group-header-text">Installation</h1>
-                  </div>
-                  <div id="card-body-text">
-                    <h4>
-                      Open a terminal and run:
-                    </h4>
-                  </div>
-                  <div id="code-group-container" class="card-container">
-                    <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="card-body-text">
+                <h4>
+                  Open a terminal and run:
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 pip install quickfin
 </pre>
-                    </div>
-                  </div>
                 </div>
               </div>
-            </article>
+            </div>
+          </div>
+        </article>
 
-            <article>
-              <div id="code-group">
-                <div id="code-group-header-container" class="card-container">
-                  <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                    <h1 id="code-group-header-text">Quickstart</h1>
-                  </div>
-                  <div id="card-body-text">
-                    <h4>
-                      Retrieve a data payload containing the
-                      most recent stock price data available
-                      for the stock symbol passed to the `symbol`
-                      parameter.  Method will return live market
-                      price quotes during trading hours.
-                    </h4>
-                  </div>
-                  <div id="code-group-container" class="card-container">
-                    <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">Upgrade</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  After initial installation open a terminal and run the following to get the
+                  latest version of Quick Fin:
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+pip install --upgrade quickfin
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <section>
+
+        <div class="hr">
+          <hr id="top-div" class="uk-divider-icon">
+        </div>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">Card Header</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  Retrieve a data payload containing the most recent stock price 
+                  data available for the stock symbol passed to the `symbol` 
+                  parameter. Method will return live market price quotes during 
+                  trading hours. 
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 from quickfin import *
 
@@ -559,15 +612,12 @@ price_data = PriceData()
 
 print(price_data.current("SNOW"))
 </pre>
-                    </div>
-                    <div id="card-body-text">
-                      <h4>
-                        Output:
-                      </h4>
-                    </div>
-                    <div id="code-group-container" class="card-container">
-                      <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
-  <pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
 {
   'current': {
     'Adj Close': 161.6,
@@ -588,18 +638,14 @@ print(price_data.current("SNOW"))
     'symbol': 'SNOW'
   }
 }
-  </pre>
-                      </div>
-  
-                  </div>
-                </div>
+</pre>
+
               </div>
-            </article>
-
+            </div>
           </div>
-        </div>
-      </section>
+        </article>
 
+      </section>
 
       <footer>
           <nav id="footer"  class="uk-navbar-container" uk-sticky="position: bottom">
@@ -609,8 +655,8 @@ print(price_data.current("SNOW"))
   
                   <div class="uk-navbar-center">
 
-                    <a class="uk-link-text" href="https://www.techbyderek.com" target="_blank">
-                      <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/f579d38e59a2a1c6b1ed5d6d33012d624abdc9eb/D%2520LOGO%2520WHITE%2520-%2520360%2520-%2520NO%2520BG.png">
+                    <a class="uk-link-text" href="https://www.techbyderek.com" rel="noopener" target="_blank">
+                      <img alt="www.techbyderek.com" src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/f579d38e59a2a1c6b1ed5d6d33012d624abdc9eb/D%2520LOGO%2520WHITE%2520-%2520360%2520-%2520NO%2520BG.png">
                     </a>
 
                   </div>
