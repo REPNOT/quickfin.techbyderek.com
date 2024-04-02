@@ -1763,6 +1763,59 @@ print(data)
         </article>
 
 
+        <!-- ===   FinInfo Class - Symbols Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">symbols(payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `symbol` method is used to retrieve a 
+                  data payload containing a list of all stock symbols 
+                  available in the metadata catalog. 
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of strings.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.symbols()
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  'A', 
+  'AA', 
+  'AACG', 
+  'AACT-WT', 
+  'AACT', 
+  'AAGRW', 
+  'AAME', 
+  'AAN',
+  ---  snip  ---
+]
+
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
 
 
       </section>
