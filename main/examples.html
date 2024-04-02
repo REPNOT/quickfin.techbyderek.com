@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Quick Fin</title>
+    <title>Examples</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
@@ -562,6 +562,113 @@
       </header>
 
       <h1 id="main-title">Code Examples</h1>
+
+      <section>
+        <div class="hr">
+          <hr id="top-div" class="uk-divider-icon">
+        </div>
+
+        <article>
+          <div id="single-card-wide-white" class="card-container">
+            <div class="uk-card uk-card-default uk-card uk-card-body">
+              <h2 class="uk-card-title">FinInfo Class</h2>
+              <h4>
+                The FinInfo class provides access to the metadata catalog 
+                used for for referencing equities, stock symbols, sectors, 
+                and industry information.
+                
+                <br><br>
+                <strong>THE FOLLOWING APPLIES TO ALL FinInfo FUNCTIONS:</strong>
+                <br><br>
+                If the value is set to `False`
+                for the `payload` parameter, this method
+                will `pretty print` the requested data omitting
+                a return value.  Otherwise, the value assigned to the
+                `payload` parameter is set to `True` by default, and
+                the method will return a data payload.
+              </h4>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">Import Quick Fin & Create a FinInfo Class Instance</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  Once an instance of the FinInfo class has been created, it can be used anywhere
+                  throughout a python module.  At a minimum, this only needs to be done once.
+                  <br><br>
+                  Import Quick Fin and create an instance of the FinInfo class: 
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+from quickfin import *
+
+fin_info = FinInfo()
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="single-card-wide-white" class="card-container">
+            <div class="uk-card uk-card-default uk-card uk-card-body">
+              <h2 class="uk-card-title">FinInfo Methods</h2>
+              <h4>
+                The following examples provide brief descriptions for each 
+                method available in the `FinInfo` class and will utilize the class instance
+                assigned to the `fin_info` variable from the example above.
+              </h4>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">equity(symbol, payload=True)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The equity method is used to retrieve a data object containing the 
+                  symbol, company name, sector, and industry for the stock symbol 
+                  passed to the `symbol` parameter.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+fin_info.equity("AA")
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{'industry': 'Aluminum',
+'name': 'Alcoa Corporation',
+'sector': 'Basic Materials',
+'symbol': 'AA'}
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
 
 
 
