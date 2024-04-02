@@ -1817,6 +1817,121 @@ print(data)
         </article>
 
 
+        <!-- ===   FinInfo Class - Sector Symbols Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">sector_symbols(sector, payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `sector_symbols` method is used to retrieve a 
+                  data payload containing a list of all stock 
+                  symbols belonging to the sector passed to the 
+                  `sector` parameter available in the metadata catalog. 
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+
+                  An array of strings.
+          
+                  By default, the return value will include an 
+                  object containing all sectors and associated 
+                  symbols.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.sector_symbols("communication services")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+'ABLV', 
+'ABLVW', 
+'ADTH', 
+'ADVWW', 
+'ANTE', 
+'BAOS', 
+'BOC', 
+'CCO',
+---  snip  ---
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ===   FinInfo Class - Industry Symbols Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">industry_symbols(industry, payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `industry_symbols` method is used to retrieve a
+                  data payload of all stock symbols belonging to the
+                  industry passed to the `industry` parameter
+                  available in the metadata catalog. 
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of strings.
+          
+                  By default, the return value will include an 
+                  object containing all industries and associated 
+                  symbols.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.industry_symbols("electronic components")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  'ALNT', 
+  'BELFA', 
+  'CLS', 
+  'CTS', 
+  'DAKT', 
+  'DSWL', 
+  'ELTK', 
+  'FLEX',
+  ---  snip  ---  
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
 
       </section>
 
