@@ -1631,6 +1631,74 @@ print(data)
 
 
 
+        <!-- ===   FinInfo Class - Sector Equities Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">sector_equities(sector, payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `sector_industries` method is used to retrieve a
+                  data payload containing a list of all equities belonging 
+                  to the sector passed to the `sector` parameter. 
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of objects.
+          
+                  By default, the return value will include an 
+                  object containing all sectors and associated 
+                  equity data.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.sector_equities("healthcare")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  {
+    'industry': 'Diagnostics & Research',
+    'name': 'Agilent Technologies, Inc.',
+    'sector': 'Healthcare',
+    'symbol': 'A'
+  },
+  {
+    'industry': 'Drug Manufacturers - General',
+    'name': 'AbbVie Inc.',
+    'sector': 'Healthcare',
+    'symbol': 'ABBV'
+  },
+  {
+    'industry': 'Biotechnology',
+    'name': 'AbCellera Biologics Inc.',
+    'sector': 'Healthcare',
+    'symbol': 'ABCL'
+  },
+  ---  snip  ---
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+
 
       </section>
 
