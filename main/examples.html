@@ -563,7 +563,10 @@
 
       <h1 id="main-title">Code Examples</h1>
 
+
+      <!-- ===   FinInfo Class   === -->
       <section>
+
         <div class="hr">
           <hr id="top-div" class="uk-divider-icon">
         </div>
@@ -648,7 +651,13 @@ fin_info = FinInfo()
 
                 <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
-fin_info.equity("AA")
+
+data = fin_info.equity("MSFT")
+
+print(type(data)) # Print Python data type
+
+print(data) # Print object assigned to `data` variable
+
 </pre>
                 </div>
 
@@ -656,10 +665,14 @@ fin_info.equity("AA")
                   <h6>Output:</h6>
                   <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
-{'industry': 'Aluminum',
-'name': 'Alcoa Corporation',
-'sector': 'Basic Materials',
-'symbol': 'AA'}
+&#60;class 'dict'&#62;
+
+{
+  'industry': 'Software - Infrastructure',
+  'name': 'Microsoft Corporation',
+  'sector': 'Technology',
+  'symbol': 'MSFT'
+}
 </pre>
 
               </div>
@@ -670,6 +683,137 @@ fin_info.equity("AA")
       </section>
 
 
+      <!-- ===   PriceData Class   === -->
+      <section>
+
+        <div class="hr">
+          <hr id="top-div" class="uk-divider-icon">
+        </div>
+
+        <article>
+          <div id="single-card-wide-white" class="card-container">
+            <div class="uk-card uk-card-default uk-card uk-card-body">
+              <h2 class="uk-card-title">PriceData Class</h2>
+              <h4>
+                The PriceData class provides instant access to live 
+                and historical stock market price data and automated 
+                Plotly data visualization generators.
+              </h4>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">Import Quick Fin & Create a PriceData Class Instance</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  Once an instance of the PriceData class has been created, it can be used anywhere
+                  throughout a python module.  At a minimum, this only needs to be done once.
+                  <br><br>
+                  Import Quick Fin and create an instance of the PriceData class: 
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+from quickfin import *
+
+price_data = PriceData()
+</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="single-card-wide-white" class="card-container">
+            <div class="uk-card uk-card-default uk-card uk-card-body">
+              <h2 class="uk-card-title">PriceData Methods</h2>
+              <h4>
+                The following examples provide brief descriptions for each 
+                method available in the `PriceData` class and will utilize the class instance
+                assigned to the `price_data` variable from the example above.
+              </h4>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">current(symbol)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The current method is used to retrieve a 
+                  payload containing the most recent stock price 
+                  data available for the stock symbol 
+                  passed to the `symbol` parameter.  
+                  
+                  <br><br>
+
+                  Method will return live market price quotes 
+                  during trading hours.
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+
+                  Object
+
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+
+data = price_data.current("META")
+
+print(data) # Print object assigned to `data` variable
+
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{
+  'current': {
+    'Adj Close': 491.35,
+    'Change Amount': -4.15,
+    'Change Rate': -0.01,
+    'Close': 491.35,
+    'Date': '2024-04-01',
+    'Day Range': 15.65,
+    'High': 497.43,
+    'Low': 481.78,
+    'Open': 487.2,
+    'Volume': 9236300
+  },
+  'info': {
+    'industry': 'Internet Content & Information',      
+    'name': 'Meta Platforms, Inc.',
+    'sector': 'Communication Services',
+    'symbol': 'META'
+  }
+}
+
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
 
 
       <footer>
