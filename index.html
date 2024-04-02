@@ -35,6 +35,37 @@
         max-width: 1400px;
       }
 
+      .menu-links:link {
+        font-weight: bold;
+        font-size: 20px;
+        color:#000000;
+      }
+
+      .menu-links:hover {
+        font-weight: bold;
+        font-size: 20px;
+        color:#000000;
+      }
+
+      .menu-links-active:link {
+        font-weight: bold;
+        font-size: 20px;
+        color:#000000;
+      }
+
+      #menu-name {
+        font-weight: 600;
+        font-size: 17.5px;
+        color:#ffffff;
+      }
+
+      .uk-navbar-dropdown {
+        background-color: #ffffff;
+        color:#ffffff;
+        border-radius: 5px;
+        box-shadow: rgba(4, 96, 217, 0.4) 0px 5px, rgba(4, 96, 217, 0.3) 0px 10px, rgba(4, 96, 217, 0.2) 0px 15px;
+      }
+
       nav {
         margin-bottom: 4em;
       }
@@ -103,6 +134,7 @@
       #footer {
         background-color: rgba(4, 96, 217, 1);
         height:100px;
+        box-shadow: none;
       }
 
       #top-hr {
@@ -482,14 +514,14 @@
             <div uk-navbar>
 
               <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle" href="#">
+                <a class="uk-navbar-toggle" href="#" id="menu-name">
                   <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
                 </a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li class="uk-active"><a class="uk-link-text" href="https://quickfin.techbyderek.com/">Home</a></li>
+                    <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/">Home</a></li>
                     <!-- <li class="uk-link"><a class="uk-link-text" href="#">Examples</a></li> -->
-                    <li class="uk-link"><a class="uk-link-text" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
+                    <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
                     <!-- <li class="uk-link"><a class="uk-link-text" href="#">Changelog</a></li> -->
                   </ul>
                 </div>
@@ -501,12 +533,8 @@
                     Quick Fin
                   </a>
                 </h1>
-
-                <div class="uk-navbar-center-right">
-
-                </div>
-
               </div>
+
             </div>
           </div>
         </nav>
