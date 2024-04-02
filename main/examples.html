@@ -922,7 +922,7 @@ print(data)
         </article>
 
 
-        <!-- ===   PriceData Class - History Method - Symbol Only === -->
+        <!-- ===   PriceData Class - History Method - Days Param === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -937,7 +937,7 @@ print(data)
                   passed to the `symbol` parameter.
 
                   <br><br>
-                  
+
                   Passing a positive integer value to the `days` 
                   parameter will filter the historical data to include
                   records for the number of most recent days 
@@ -1047,6 +1047,85 @@ print(data)
           </div>
         </article>
 
+
+        <!-- ===   PriceData Class - History Method - Date Param === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">history(symbol, date=None)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `history` method is used to retrieve a 
+                  payload containing all historical
+                  stock price data available for the stock symbol 
+                  passed to the `symbol` parameter.
+
+                  <br><br>
+                  
+                  Passing a date to the `date` parameter
+                  using the 'YYYY-DD-MM' format
+                  will filter the historical data to include
+                  a single record for the value 
+                  assigned to the parameter.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.history("CMS", date="2022-03-25")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{
+  'info': {
+    'industry': 'Utilities - Regulated Electric',
+    'name': 'CMS Energy Corporation',
+    'sector': 'Utilities',
+    'symbol': 'CMS'
+  },
+  'current': {
+    'Adj Close': 59.98,
+    'Change Amount': 0.41,
+    'Change Rate': 0.01,
+    'Close': 59.98,
+    'Date': '2024-04-01',
+    'Day Range': 0.7,
+    'High': 60.42,
+    'Low': 59.72,
+    'Open': 60.39,
+    'Volume': 1619100
+  },
+  'history': [
+    {
+      'Adj Close': 64.66,
+      'Change Amount': -0.72,
+      'Change Rate': -0.01,
+      'Close': 68.92,
+      'Date': '2022-03-25',
+      'Day Range': 0.94,
+      'High': 69.05,
+      'Low': 68.11,
+      'Open': 68.2,
+      'Volume': 1706900
+    }
+  ]
+}
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+        
 
         
 
