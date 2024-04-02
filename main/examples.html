@@ -1630,7 +1630,6 @@ print(data)
         </article>
 
 
-
         <!-- ===   FinInfo Class - Sector Equities Method  === -->
         <article>
           <div id="code-group">
@@ -1688,6 +1687,72 @@ print(data)
     'sector': 'Healthcare',
     'symbol': 'ABCL'
   },
+  ---  snip  ---
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ===   FinInfo Class - Industry Equities Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">industry_equities(industry, payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `industry_industries` method is used to retrieve a 
+                  data payload containing a list of all equities belonging 
+                  to the industry passed to the `industry` parameter.
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+          
+                  An array of objects.
+          
+                  By default, the return value will include an 
+                  object containing all industries and associated 
+                  equity data.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.industry_equities("farm products")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  {
+    'industry': 'Farm Products',
+    'name': 'African Agriculture Holdings Inc.',
+    'sector': 'Consumer Defensive',
+    'symbol': 'AAGRW'},
+  {
+    'industry': 'Farm Products',
+    'name': 'Archer-Daniels-Midland Company',
+    'sector': 'Consumer Defensive',
+    'symbol': 'ADM'
+  },
+  {
+    'industry': 'Farm Products',
+    'name': 'Forafric Global PLC',
+    'sector': 'Consumer Defensive',
+    'symbol': 'AFRIW'
+  }
   ---  snip  ---
 ]
 </pre>
