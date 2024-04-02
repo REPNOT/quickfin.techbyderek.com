@@ -571,6 +571,8 @@
           <hr id="top-div" class="uk-divider-icon">
         </div>
 
+
+        <!-- ===   FinInfo Class - Description  === -->
         <article>
           <div id="single-card-wide-white" class="card-container">
             <div class="uk-card uk-card-default uk-card uk-card-body">
@@ -594,6 +596,8 @@
           </div>
         </article>
 
+
+        <!-- ===   FinInfo Class - Import & Create Class Instance  === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -621,6 +625,8 @@ fin_info = FinInfo()
           </div>
         </article>
 
+
+        <!-- ===   FinInfo Class - FinInfo Method  === -->
         <article>
           <div id="single-card-wide-white" class="card-container">
             <div class="uk-card uk-card-default uk-card uk-card-body">
@@ -634,6 +640,8 @@ fin_info = FinInfo()
           </div>
         </article>
 
+
+        <!-- ===   FinInfo Class - Equity Method  === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -651,13 +659,11 @@ fin_info = FinInfo()
 
                 <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
-
-data = fin_info.equity("MSFT")
+data = fin_info.equity("IBM")
 
 print(type(data)) # Print Python data type
 
 print(data) # Print object assigned to `data` variable
-
 </pre>
                 </div>
 
@@ -668,10 +674,10 @@ print(data) # Print object assigned to `data` variable
 &#60;class 'dict'&#62;
 
 {
-  'industry': 'Software - Infrastructure',
-  'name': 'Microsoft Corporation',
-  'sector': 'Technology',
-  'symbol': 'MSFT'
+ 'industry': 'Information Technology Services',
+ 'name': 'International Business Machines Corporation',
+ 'sector': 'Technology',
+ 'symbol': 'IBM'
 }
 </pre>
 
@@ -690,6 +696,8 @@ print(data) # Print object assigned to `data` variable
           <hr id="top-div" class="uk-divider-icon">
         </div>
 
+
+        <!-- ===   PriceData Class - Description  === -->
         <article>
           <div id="single-card-wide-white" class="card-container">
             <div class="uk-card uk-card-default uk-card uk-card-body">
@@ -703,6 +711,8 @@ print(data) # Print object assigned to `data` variable
           </div>
         </article>
 
+
+        <!-- ===   PriceData Class - Import & Create Class Instance  === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -730,6 +740,8 @@ price_data = PriceData()
           </div>
         </article>
 
+
+        <!-- ===   PriceData Class - PriceData Method  === -->
         <article>
           <div id="single-card-wide-white" class="card-container">
             <div class="uk-card uk-card-default uk-card uk-card-body">
@@ -743,6 +755,8 @@ price_data = PriceData()
           </div>
         </article>
 
+
+        <!-- ===   PriceData Class - Current Method  === -->
         <article>
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
@@ -751,7 +765,7 @@ price_data = PriceData()
               </div>
               <div id="card-body-text">
                 <h4>
-                  The current method is used to retrieve a 
+                  The `current` method is used to retrieve a 
                   payload containing the most recent stock price 
                   data available for the stock symbol 
                   passed to the `symbol` parameter.  
@@ -773,11 +787,9 @@ price_data = PriceData()
 
                 <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
-
-data = price_data.current("META")
+data = price_data.current("MSFT")
 
 print(data) # Print object assigned to `data` variable
-
 </pre>
                 </div>
 
@@ -786,6 +798,69 @@ print(data) # Print object assigned to `data` variable
                   <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
+  'info': {
+    'industry': 'Software - Infrastructure',
+    'name': 'Microsoft Corporation',
+    'sector': 'Technology',
+    'symbol': 'MSFT'
+  },
+  'current': {
+    'Adj Close': 424.57,
+    'Change Amount': -0.62,
+    'Change Rate': -0.0,
+    'Close': 424.57,
+    'Date': '2024-04-01',
+    'Day Range': 5.67,
+    'High': 427.89,
+    'Low': 422.22,
+    'Open': 423.95,
+    'Volume': 16298900
+  }
+}
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ===   PriceData Class - History Method - Symbol Only === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">history(symbol)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `history` method is used to retrieve a 
+                  payload containing all historical
+                  stock price data available for the stock symbol 
+                  passed to the `symbol` parameter.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.history("META")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{
+  'info': {
+    'industry': 'Internet Content & Information',      
+    'name': 'Meta Platforms, Inc.',
+    'sector': 'Communication Services',
+    'symbol': 'META'
+  },
   'current': {
     'Adj Close': 491.35,
     'Change Amount': -4.15,
@@ -798,20 +873,54 @@ print(data) # Print object assigned to `data` variable
     'Open': 487.2,
     'Volume': 9236300
   },
-  'info': {
-    'industry': 'Internet Content & Information',      
-    'name': 'Meta Platforms, Inc.',
-    'sector': 'Communication Services',
-    'symbol': 'META'
-  }
-}
+  'history': [
+    {
+      'Adj Close': 491.35,
+      'Change Amount': -4.15,
+      'Change Rate': -0.01,
+      'Close': 491.35,
+      'Date': '2024-04-01',
+      'Day Range': 15.65,
+      'High': 497.43,
+      'Low': 481.78,
+      'Open': 487.2,
+      'Volume': 9236300
+    },
+    {
+      'Adj Close': 485.58,
+      'Change Amount': 7.26,
+      'Change Rate': 0.01,
+      'Close': 485.58,
+      'Date': '2024-03-28',
+      'Day Range': 7.74,
+      'High': 492.89,
+      'Low': 485.15,
+      'Open': 492.84,
+      'Volume': 15212800
+    },
+    {
+      'Adj Close': 493.86,
+      'Change Amount': 5.44,
+      'Change Rate': 0.01,
+      'Close': 493.86,
+      'Date': '2024-03-27',
+      'Day Range': 11.82,
+      'High': 499.89,
+      'Low': 488.07,
+      'Open': 499.3,
+      'Volume': 9989700
+    }
 
+    ---  snip  ---
+  ]
+}
 </pre>
 
               </div>
             </div>
           </div>
         </article>
+
 
       </section>
 
