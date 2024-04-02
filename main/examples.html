@@ -927,7 +927,7 @@ print(data)
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
               <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol, days=None)</h1>
+                <h1 id="code-group-header-text">history(symbol, days)</h1>
               </div>
               <div id="card-body-text">
                 <h4>
@@ -1053,7 +1053,7 @@ print(data)
           <div id="code-group">
             <div id="code-group-header-container" class="card-container">
               <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol, date=None)</h1>
+                <h1 id="code-group-header-text">history(symbol, date)</h1>
               </div>
               <div id="card-body-text">
                 <h4>
@@ -1126,6 +1126,111 @@ print(data)
           </div>
         </article>
         
+
+        <!-- ===   PriceData Class - History Method - Date Start & Date End Param's === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">history(symbol, date_start, date_end)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `history` method is used to retrieve a 
+                  payload containing all historical
+                  stock price data available for the stock symbol 
+                  passed to the `symbol` parameter.
+
+                  <br><br>
+                  
+                  Passing a date to both the `date_start` 
+                  and the `date_end` parameter
+                  using the 'YYYY-DD-MM' format
+                  will filter the historical data to include
+                  multiple records for the date range
+                  represented by both values.  Values must 
+                  be passed to both the date_start and 
+                  date_end parameter for date ranges to be returned.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.history("SCS", date_start="2021-03-10", date_end="2021-03-14")
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{
+  'info': {
+    'industry': 'Business Equipment & Supplies',
+    'name': 'Steelcase Inc.',
+    'sector': 'Industrials',
+    'symbol': 'SCS'
+  },
+  'current': {
+    'Adj Close': 13.03,
+    'Change Amount': 0.09,
+    'Change Rate': 0.01,
+    'Close': 13.03,
+    'Date': '2024-04-01',
+    'Day Range': 0.35,
+    'High': 13.3,
+    'Low': 12.95,
+    'Open': 13.12,
+    'Volume': 1679800
+  },
+  'history': [
+    {
+      'Adj Close': 14.47,
+      'Change Amount': -0.38,
+      'Change Rate': -0.02,
+      'Close': 16.59,
+      'Date': '2021-03-12',
+      'Day Range': 0.55,
+      'High': 16.71,
+      'Low': 16.16,
+      'Open': 16.21,
+      'Volume': 542400
+    },
+    {
+      'Adj Close': 14.08,
+      'Change Amount': 0.03,
+      'Change Rate': 0.0,
+      'Close': 16.14,
+      'Date': '2021-03-11',
+      'Day Range': 0.29,
+      'High': 16.23,
+      'Low': 15.94,
+      'Open': 16.17,
+      'Volume': 620200
+    },
+    {
+      'Adj Close': 14.11,
+      'Change Amount': -0.73,
+      'Change Rate': -0.05,
+      'Close': 16.18,
+      'Date': '2021-03-10',
+      'Day Range': 0.91,
+      'High': 16.22,
+      'Low': 15.31,
+      'Open': 15.45,
+      'Volume': 758800
+    }
+  ]
+}
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
 
         
 
