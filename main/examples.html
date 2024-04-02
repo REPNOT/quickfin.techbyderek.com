@@ -922,6 +922,134 @@ print(data)
         </article>
 
 
+        <!-- ===   PriceData Class - History Method - Symbol Only === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">history(symbol, days=None)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `history` method is used to retrieve a 
+                  payload containing all historical
+                  stock price data available for the stock symbol 
+                  passed to the `symbol` parameter.
+
+                  <br><br>
+                  
+                  Passing a positive integer value to the `days` 
+                  parameter will filter the historical data to include
+                  records for the number of most recent days 
+                  represented by the parameter value.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = price_data.history("DTE", days=5)
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+{
+  'info': {
+    'industry': 'Utilities - Regulated Electric',
+    'name': 'DTE Energy Company',
+    'sector': 'Utilities',
+    'symbol': 'DTE'
+  },
+  'current': {
+    'Adj Close': 110.73,
+    'Change Amount': 1.41,
+    'Change Rate': 0.01,
+    'Close': 110.73,
+    'Date': '2024-04-01',
+    'Day Range': 1.86,
+    'High': 112.14,
+    'Low': 110.28,
+    'Open': 112.14,
+    'Volume': 847500
+  },
+  'history': [
+    {
+      'Adj Close': 110.73,
+      'Change Amount': 1.41,
+      'Change Rate': 0.01,
+      'Close': 110.73,
+      'Date': '2024-04-01',
+      'Day Range': 1.86,
+      'High': 112.14,
+      'Low': 110.28,
+      'Open': 112.14,
+      'Volume': 847500
+    },
+    {
+      'Adj Close': 112.14,
+      'Change Amount': -0.82,
+      'Change Rate': -0.01,
+      'Close': 112.14,
+      'Date': '2024-03-28',
+      'Day Range': 1.34,
+      'High': 112.31,
+      'Low': 110.97,
+      'Open': 111.32,
+      'Volume': 990500
+    },
+    {
+      'Adj Close': 111.3,
+      'Change Amount': -3.35,
+      'Change Rate': -0.03,
+      'Close': 111.3,
+      'Date': '2024-03-27',
+      'Day Range': 3.46,
+      'High': 111.41,
+      'Low': 107.95,
+      'Open': 107.95,
+      'Volume': 1668700
+    },
+    {
+      'Adj Close': 107.13,
+      'Change Amount': 1.34,
+      'Change Rate': 0.01,
+      'Close': 107.13,
+      'Date': '2024-03-26',
+      'Day Range': 1.91,
+      'High': 108.98,
+      'Low': 107.07,
+      'Open': 108.47,
+      'Volume': 1110800
+    },
+    {
+      'Adj Close': 108.42,
+      'Change Amount': 0.88,
+      'Change Rate': 0.01,
+      'Close': 108.42,
+      'Date': '2024-03-25',
+      'Day Range': 1.41,
+      'High': 109.3,
+      'Low': 107.89,
+      'Open': 109.3,
+      'Volume': 1045100
+    }
+  ]
+}
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        
+
       </section>
 
 
