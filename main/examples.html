@@ -535,6 +535,7 @@
   </head>
   <body>
 
+
       <header>
         <nav class="uk-navbar-container-stretch">
           <div class="uk-container">
@@ -567,11 +568,13 @@
         </nav>
       </header>
 
+
       <h1 id="main-title">Code Examples</h1>
 
 
       <!-- ===   PriceData Class   === -->
       <section>
+
 
         <!-- ===   PriceData Class - Description  === -->
         <article>
@@ -586,6 +589,7 @@
             </div>
           </div>
         </article>
+
 
         <!-- ===   PriceData Class - Import & Create Class Instance  === -->
         <article>
@@ -1352,7 +1356,7 @@ fin_info = FinInfo()
               </div>
               <div id="card-body-text">
                 <h4>
-                  The equity method is used to retrieve a data object containing the 
+                  The `equity` method is used to retrieve a data object containing the 
                   symbol, company name, sector, and industry for the stock symbol 
                   passed to the `symbol` parameter.
                 </h4>
@@ -1387,6 +1391,72 @@ print(data) # Print object assigned to `data` variable
             </div>
           </div>
         </article>
+
+
+        <!-- ===   FinInfo Class - Equities Method  === -->
+        <article>
+          <div id="code-group">
+            <div id="code-group-header-container" class="card-container">
+              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+                <h1 id="code-group-header-text">equities(payload)</h1>
+              </div>
+              <div id="card-body-text">
+                <h4>
+                  The `equities` method is used to retrieve a data 
+                  payload containing the symbol, company name,
+                  sector, and industry for all equities included in the
+                  metadata catalog.
+          
+                  <br><br>
+                  <strong>PAYLOAD CONTENTS:</strong>
+                  <br><br>
+
+                  An array of objects.
+                </h4>
+              </div>
+              <div id="code-group-container" class="card-container">
+
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+data = fin_info.equities()
+
+print(data)
+</pre>
+                </div>
+
+
+                  <h6>Output:</h6>
+                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+<pre>
+[
+  {
+    'industry': 'Diagnostics & Research',
+    'name': 'Agilent Technologies, Inc.',
+    'sector': 'Healthcare',
+    'symbol': 'A'},
+  {
+    'industry': 'Aluminum',
+    'name': 'Alcoa Corporation',
+    'sector': 'Basic Materials',
+    'symbol': 'AA'
+  },
+  {
+    'industry': 'Education & Training Services',
+    'name': 'ATA Creativity Global',
+    'sector': 'Consumer Defensive',
+    'symbol': 'AACG'
+  },
+  ---  snip  ---
+]
+</pre>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+
 
       </section>
 
