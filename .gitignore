@@ -10,8 +10,6 @@ data/
 *.so
 
 misc/
-main/
-data/
 
 # Distribution / packaging
 .Python

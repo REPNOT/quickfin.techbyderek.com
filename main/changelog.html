@@ -520,10 +520,10 @@
                 </a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/">Home</a></li>
+                    <li class="uk-link"><a class="menu-links-active" href="https://quickfin.techbyderek.com/">Home</a></li>
                     <li class="uk-link"><a class="menu-links" href="#">Examples</a></li>
                     <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
-                    <li class="uk-link"><a class="menu-links" href="#">Changelog</a></li>
+                    <li class="uk-active"><a class="menu-links" href="#">Changelog</a></li>
                   </ul>
                 </div>
               </div>
@@ -540,141 +540,6 @@
           </div>
         </nav>
       </header>
-
-      <section>
-        <article>
-          <div id="single-card-wide-dark" class="card-container">
-            <div class="uk-card uk-card-default uk-card uk-card-body">
-              <h2 class="uk-card-title">Description</h2>
-              <h4>
-                Quickfin is a Python module providing instant access to live
-                and historical stock market price data, automated
-                Plotly data visualization generators and a metadata
-                catalog for referencing equities, stock symbols, sector,
-                and industry information.
-              </h4>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section>
-
-        <div class="hr">
-          <hr id="top-div" class="uk-divider-icon">
-        </div>
-
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">Installation</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  Open a terminal and run:
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
-<pre>
-pip install quickfin
-</pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">Upgrade</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  After initial installation open a terminal and run the following to get the
-                  latest version of Quick Fin:
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
-<pre>
-pip install --upgrade quickfin
-</pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </section>
-
-      <section>
-
-        <div class="hr">
-          <hr id="top-div" class="uk-divider-icon">
-        </div>
-
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">Card Header</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  Retrieve a data payload containing the most recent stock price 
-                  data available for the stock symbol passed to the `symbol` 
-                  parameter. Method will return live market price quotes during 
-                  trading hours. 
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
-<pre>
-from quickfin import *
-
-price_data = PriceData()
-
-print(price_data.current("SNOW"))
-</pre>
-                </div>
-
-
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
-<pre>
-{
-  'current': {
-    'Adj Close': 161.6,
-    'Change Amount': 2.42,
-    'Change Rate': 0.01,
-    'Close': 161.6,
-    'Date': '2024-03-28',
-    'Day Range': 4.89,
-    'High': 165.89,
-    'Low': 161.0,
-    'Open': 164.02,
-    'Volume': 10106900
-  },
-  'info': {
-    'industry': 'Software - Application',
-    'name': 'Snowflake Inc.',
-    'sector': 'Technology',
-    'symbol': 'SNOW'
-  }
-}
-</pre>
-
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </section>
 
       <footer>
           <nav id="footer"  class="uk-navbar-container" uk-sticky="position: bottom">
