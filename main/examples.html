@@ -20,6 +20,47 @@
         background-color: #000000;
       }
 
+      .icon-text-container {
+        margin-top:.5em;
+
+      }
+
+      svg {
+        fill: #ffffff;
+      }
+
+      svg:hover {
+        fill:#000000;
+      }
+
+      .icon-container {
+        text-decoration: none;
+        text-decoration-line: none;
+      }
+
+      .icon-grid {
+        margin-top:.5em;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .icon-container {
+        margin-top: 1em;
+        padding:.5em;
+        border-radius: 5px;
+        text-align:center;
+        background-color: #0460d9;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .icon-text {
+        color:#ffffff;
+        font-size: 25px;
+        font-weight: 600;
+      }
+
       .image {
         width: 100%;
         box-shadow: rgba(4, 96, 217, 0.4) 5px 5px, rgba(4, 96, 217, 0.3) 10px 10px, rgba(4, 96, 217, 0.2) 15px 15px, rgba(4, 96, 217, 0.1) 20px 20px, rgba(4, 96, 217, 0.05) 25px 25px;
@@ -545,35 +586,36 @@
   <body>
 
 
-      <header>
-        <nav class="uk-navbar-container-stretch">
-          <div class="uk-container-stretch">
-            <div uk-navbar>
+    <header>
+      <nav class="uk-navbar-container-stretch">
+        <div class="uk-container-stretch">
+          <div uk-navbar>
 
-              <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle" href="#" id="menu-name">
-                  <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
-                </a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/">Home</a></li>
-                    <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
-                    <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
-                    <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/changelog.html">Changelog</a></li>
-                  </ul>
-                </div>
+            <div class="uk-navbar-left">
+              <a class="uk-navbar-toggle" href="#" id="menu-name">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+              </a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/">Home</a></li>
+                  <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
+                  <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
+                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/changelog.html">Changelog</a></li>
+                </ul>
               </div>
-
-              <div class="uk-navbar-center">
-                <a alt="GitHub Repo" href="https://github.com/REPNOT/quickfin" rel="noopener" target="_blank"><img class="badges" alt="GitHub Repo" src="https://badgen.net/badge/repo/quickfin/black?icon=github" height="24"></a>
-                <h1>Quick Fin</h1>
-                <a alt="PyPi version" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank"><img class="badges" src="https://badge.fury.io/py/quickfin.svg" alt="PyPI version" height="24"></a>
-              </div>
-
             </div>
+
+            <div class="uk-navbar-center">
+
+              <!-- <a alt="GitHub Repo" href="https://github.com/REPNOT/quickfin" rel="noopener" target="_blank"><img class="badges" alt="GitHub Repo" src="https://badgen.net/badge/repo/quickfin/black?icon=github" height="24"></a> -->
+              <h1>Quick Fin</h1>
+              <!-- <a alt="PyPi version" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank"><img class="badges" src="https://badge.fury.io/py/quickfin.svg" alt="PyPI version" height="24"></a> -->
+            </div>
+
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
 
       <h1 id="main-title">Code Examples</h1>
