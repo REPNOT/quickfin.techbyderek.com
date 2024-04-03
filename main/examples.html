@@ -654,178 +654,191 @@
     </header>
 
 
-      <h1 id="main-title">Code Examples</h1>
+    <h1 id="main-title">Code Examples</h1>
 
 
-      <!-- ===   PriceData Class   === -->
-      <section>
+    <!-- ===   PriceData Class   === -->
+    <section>
 
 
-        <!-- ===   PriceData Class - Description  === -->
-        <article>
-          <div id="single-card-wide-dark" class="card-container">
-            <div class="uk-card uk-card-default uk-card uk-card-body">
-              <h2 class="uk-card-title">PriceData Class</h2>
+      <!-- ===   PriceData Class - Description  === -->
+      <article>
+        <div id="single-card-wide-dark" class="card-container">
+          <div class="uk-card uk-card-default uk-card uk-card-body">
+            <h2 class="uk-card-title">PriceData Class</h2>
+            <h4>
+              The PriceData class provides instant access to live 
+              and historical stock market price data and automated 
+              Plotly data visualization generators.
+            </h4>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ===   PriceData Class - Import & Create Class Instance  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">Import Quick Fin & Create a PriceData Class Instance</h1>
+            </div>
+            <div id="card-body-text">
               <h4>
-                The PriceData class provides instant access to live 
-                and historical stock market price data and automated 
-                Plotly data visualization generators.
+                Once an instance of the PriceData class has been created, it can be used anywhere
+                throughout a python module.  At a minimum, this only needs to be done once.
+                <br><br>
+                Import Quick Fin and create an instance of the PriceData class: 
               </h4>
             </div>
-          </div>
-        </article>
-
-
-        <!-- ===   PriceData Class - Import & Create Class Instance  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">Import Quick Fin & Create a PriceData Class Instance</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  Once an instance of the PriceData class has been created, it can be used anywhere
-                  throughout a python module.  At a minimum, this only needs to be done once.
-                  <br><br>
-                  Import Quick Fin and create an instance of the PriceData class: 
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+            <div id="code-group-container" class="card-container">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 from quickfin import *
 
 price_data = PriceData()
 </pre>
-                </div>
               </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - PriceData Method  === -->
-        <article>
-          <div id="single-card-wide-white" class="card-container">
-            <div class="uk-card uk-card-default uk-card uk-card-body">
-              <h2 class="uk-card-title">PriceData Methods</h2>
+      <!-- ===   PriceData Class - PriceData Method  === -->
+      <article>
+        <div id="single-card-wide-white" class="card-container">
+          <div class="uk-card uk-card-default uk-card uk-card-body">
+            <h2 class="uk-card-title">PriceData Methods</h2>
+            <h4>
+              The following examples provide brief descriptions for each 
+              method available in the `PriceData` class and will utilize the class instance
+              assigned to the `price_data` variable from the example above.
+            </h4>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ===   PriceData Class - Current Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">current(symbol)</h1>
+            </div>
+            <div id="card-body-text">
               <h4>
-                The following examples provide brief descriptions for each 
-                method available in the `PriceData` class and will utilize the class instance
-                assigned to the `price_data` variable from the example above.
+                The `current` method is used to retrieve a 
+                payload containing the most recent stock price 
+                data available for the stock symbol 
+                passed to the `symbol` parameter.  
+                
+                <br><br>
+
+                Method will return live market price quotes 
+                during trading hours.
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+
+                Object
+
               </h4>
             </div>
-          </div>
-        </article>
+            <div id="code-group-container" class="card-container">
 
-
-        <!-- ===   PriceData Class - Current Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">current(symbol)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `current` method is used to retrieve a 
-                  payload containing the most recent stock price 
-                  data available for the stock symbol 
-                  passed to the `symbol` parameter.  
-                  
-                  <br><br>
-
-                  Method will return live market price quotes 
-                  during trading hours.
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-
-                  Object
-
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.current("MSFT")
 
 print(data) # Print object assigned to `data` variable
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
-  'info': {
-    'industry': 'Software - Infrastructure',
-    'name': 'Microsoft Corporation',
-    'sector': 'Technology',
-    'symbol': 'MSFT'
-  },
-  'current': {
-    'Adj Close': 424.57,
-    'Change Amount': -0.62,
-    'Change Rate': -0.0,
-    'Close': 424.57,
-    'Date': '2024-04-01',
-    'Day Range': 5.67,
-    'High': 427.89,
-    'Low': 422.22,
-    'Open': 423.95,
-    'Volume': 16298900
-  }
+'info': {
+  'industry': 'Software - Infrastructure',
+  'name': 'Microsoft Corporation',
+  'sector': 'Technology',
+  'symbol': 'MSFT'
+},
+'current': {
+  'Adj Close': 424.57,
+  'Change Amount': -0.62,
+  'Change Rate': -0.0,
+  'Close': 424.57,
+  'Date': '2024-04-01',
+  'Day Range': 5.67,
+  'High': 427.89,
+  'Low': 422.22,
+  'Open': 423.95,
+  'Volume': 16298900
+}
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - History Method - Symbol Only === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `history` method is used to retrieve a 
-                  payload containing all historical
-                  stock price data available for the stock symbol 
-                  passed to the `symbol` parameter.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   PriceData Class - History Method - Symbol Only === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">history(symbol)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `history` method is used to retrieve a 
+                payload containing all historical
+                stock price data available for the stock symbol 
+                passed to the `symbol` parameter.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.history("META")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
-  'info': {
-    'industry': 'Internet Content & Information',      
-    'name': 'Meta Platforms, Inc.',
-    'sector': 'Communication Services',
-    'symbol': 'META'
-  },
-  'current': {
+'info': {
+  'industry': 'Internet Content & Information',      
+  'name': 'Meta Platforms, Inc.',
+  'sector': 'Communication Services',
+  'symbol': 'META'
+},
+'current': {
+  'Adj Close': 491.35,
+  'Change Amount': -4.15,
+  'Change Rate': -0.01,
+  'Close': 491.35,
+  'Date': '2024-04-01',
+  'Day Range': 15.65,
+  'High': 497.43,
+  'Low': 481.78,
+  'Open': 487.2,
+  'Volume': 9236300
+},
+'history': [
+  {
     'Adj Close': 491.35,
     'Change Amount': -4.15,
     'Change Rate': -0.01,
@@ -837,99 +850,99 @@ print(data)
     'Open': 487.2,
     'Volume': 9236300
   },
-  'history': [
-    {
-      'Adj Close': 491.35,
-      'Change Amount': -4.15,
-      'Change Rate': -0.01,
-      'Close': 491.35,
-      'Date': '2024-04-01',
-      'Day Range': 15.65,
-      'High': 497.43,
-      'Low': 481.78,
-      'Open': 487.2,
-      'Volume': 9236300
-    },
-    {
-      'Adj Close': 485.58,
-      'Change Amount': 7.26,
-      'Change Rate': 0.01,
-      'Close': 485.58,
-      'Date': '2024-03-28',
-      'Day Range': 7.74,
-      'High': 492.89,
-      'Low': 485.15,
-      'Open': 492.84,
-      'Volume': 15212800
-    },
-    {
-      'Adj Close': 493.86,
-      'Change Amount': 5.44,
-      'Change Rate': 0.01,
-      'Close': 493.86,
-      'Date': '2024-03-27',
-      'Day Range': 11.82,
-      'High': 499.89,
-      'Low': 488.07,
-      'Open': 499.3,
-      'Volume': 9989700
-    }
+  {
+    'Adj Close': 485.58,
+    'Change Amount': 7.26,
+    'Change Rate': 0.01,
+    'Close': 485.58,
+    'Date': '2024-03-28',
+    'Day Range': 7.74,
+    'High': 492.89,
+    'Low': 485.15,
+    'Open': 492.84,
+    'Volume': 15212800
+  },
+  {
+    'Adj Close': 493.86,
+    'Change Amount': 5.44,
+    'Change Rate': 0.01,
+    'Close': 493.86,
+    'Date': '2024-03-27',
+    'Day Range': 11.82,
+    'High': 499.89,
+    'Low': 488.07,
+    'Open': 499.3,
+    'Volume': 9989700
+  }
 
-    ---  snip  ---
-  ]
+  ---  snip  ---
+]
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - History Method - Days Param === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol, days)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `history` method is used to retrieve a 
-                  payload containing all historical
-                  stock price data available for the stock symbol 
-                  passed to the `symbol` parameter.
+      <!-- ===   PriceData Class - History Method - Days Param === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">history(symbol, days)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `history` method is used to retrieve a 
+                payload containing all historical
+                stock price data available for the stock symbol 
+                passed to the `symbol` parameter.
 
-                  <br><br>
+                <br><br>
 
-                  Passing a positive integer value to the `days` 
-                  parameter will filter the historical data to include
-                  records for the number of most recent days 
-                  represented by the parameter value.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                Passing a positive integer value to the `days` 
+                parameter will filter the historical data to include
+                records for the number of most recent days 
+                represented by the parameter value.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.history("DTE", days=5)
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
-  'info': {
-    'industry': 'Utilities - Regulated Electric',
-    'name': 'DTE Energy Company',
-    'sector': 'Utilities',
-    'symbol': 'DTE'
-  },
-  'current': {
+'info': {
+  'industry': 'Utilities - Regulated Electric',
+  'name': 'DTE Energy Company',
+  'sector': 'Utilities',
+  'symbol': 'DTE'
+},
+'current': {
+  'Adj Close': 110.73,
+  'Change Amount': 1.41,
+  'Change Rate': 0.01,
+  'Close': 110.73,
+  'Date': '2024-04-01',
+  'Day Range': 1.86,
+  'High': 112.14,
+  'Low': 110.28,
+  'Open': 112.14,
+  'Volume': 847500
+},
+'history': [
+  {
     'Adj Close': 110.73,
     'Change Amount': 1.41,
     'Change Rate': 0.01,
@@ -941,514 +954,501 @@ print(data)
     'Open': 112.14,
     'Volume': 847500
   },
-  'history': [
-    {
-      'Adj Close': 110.73,
-      'Change Amount': 1.41,
-      'Change Rate': 0.01,
-      'Close': 110.73,
-      'Date': '2024-04-01',
-      'Day Range': 1.86,
-      'High': 112.14,
-      'Low': 110.28,
-      'Open': 112.14,
-      'Volume': 847500
-    },
-    {
-      'Adj Close': 112.14,
-      'Change Amount': -0.82,
-      'Change Rate': -0.01,
-      'Close': 112.14,
-      'Date': '2024-03-28',
-      'Day Range': 1.34,
-      'High': 112.31,
-      'Low': 110.97,
-      'Open': 111.32,
-      'Volume': 990500
-    },
-    {
-      'Adj Close': 111.3,
-      'Change Amount': -3.35,
-      'Change Rate': -0.03,
-      'Close': 111.3,
-      'Date': '2024-03-27',
-      'Day Range': 3.46,
-      'High': 111.41,
-      'Low': 107.95,
-      'Open': 107.95,
-      'Volume': 1668700
-    },
-    {
-      'Adj Close': 107.13,
-      'Change Amount': 1.34,
-      'Change Rate': 0.01,
-      'Close': 107.13,
-      'Date': '2024-03-26',
-      'Day Range': 1.91,
-      'High': 108.98,
-      'Low': 107.07,
-      'Open': 108.47,
-      'Volume': 1110800
-    },
-    {
-      'Adj Close': 108.42,
-      'Change Amount': 0.88,
-      'Change Rate': 0.01,
-      'Close': 108.42,
-      'Date': '2024-03-25',
-      'Day Range': 1.41,
-      'High': 109.3,
-      'Low': 107.89,
-      'Open': 109.3,
-      'Volume': 1045100
-    }
-  ]
+  {
+    'Adj Close': 112.14,
+    'Change Amount': -0.82,
+    'Change Rate': -0.01,
+    'Close': 112.14,
+    'Date': '2024-03-28',
+    'Day Range': 1.34,
+    'High': 112.31,
+    'Low': 110.97,
+    'Open': 111.32,
+    'Volume': 990500
+  },
+  {
+    'Adj Close': 111.3,
+    'Change Amount': -3.35,
+    'Change Rate': -0.03,
+    'Close': 111.3,
+    'Date': '2024-03-27',
+    'Day Range': 3.46,
+    'High': 111.41,
+    'Low': 107.95,
+    'Open': 107.95,
+    'Volume': 1668700
+  },
+  {
+    'Adj Close': 107.13,
+    'Change Amount': 1.34,
+    'Change Rate': 0.01,
+    'Close': 107.13,
+    'Date': '2024-03-26',
+    'Day Range': 1.91,
+    'High': 108.98,
+    'Low': 107.07,
+    'Open': 108.47,
+    'Volume': 1110800
+  },
+  {
+    'Adj Close': 108.42,
+    'Change Amount': 0.88,
+    'Change Rate': 0.01,
+    'Close': 108.42,
+    'Date': '2024-03-25',
+    'Day Range': 1.41,
+    'High': 109.3,
+    'Low': 107.89,
+    'Open': 109.3,
+    'Volume': 1045100
+  }
+]
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - History Method - Date Param === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol, date)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `history` method is used to retrieve a 
-                  payload containing all historical
-                  stock price data available for the stock symbol 
-                  passed to the `symbol` parameter.
+      <!-- ===   PriceData Class - History Method - Date Param === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">history(symbol, date)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `history` method is used to retrieve a 
+                payload containing all historical
+                stock price data available for the stock symbol 
+                passed to the `symbol` parameter.
 
-                  <br><br>
-                  
-                  Passing a date to the `date` parameter
-                  using the 'YYYY-DD-MM' format
-                  will filter the historical data to include
-                  a single record for the value 
-                  assigned to the parameter.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                <br><br>
+                
+                Passing a date to the `date` parameter
+                using the 'YYYY-DD-MM' format
+                will filter the historical data to include
+                a single record for the value 
+                assigned to the parameter.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.history("CMS", date="2022-03-25")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
-  'info': {
-    'industry': 'Utilities - Regulated Electric',
-    'name': 'CMS Energy Corporation',
-    'sector': 'Utilities',
-    'symbol': 'CMS'
-  },
-  'current': {
-    'Adj Close': 59.98,
-    'Change Amount': 0.41,
-    'Change Rate': 0.01,
-    'Close': 59.98,
-    'Date': '2024-04-01',
-    'Day Range': 0.7,
-    'High': 60.42,
-    'Low': 59.72,
-    'Open': 60.39,
-    'Volume': 1619100
-  },
-  'history': [
-    {
-      'Adj Close': 64.66,
-      'Change Amount': -0.72,
-      'Change Rate': -0.01,
-      'Close': 68.92,
-      'Date': '2022-03-25',
-      'Day Range': 0.94,
-      'High': 69.05,
-      'Low': 68.11,
-      'Open': 68.2,
-      'Volume': 1706900
-    }
-  ]
+'info': {
+  'industry': 'Utilities - Regulated Electric',
+  'name': 'CMS Energy Corporation',
+  'sector': 'Utilities',
+  'symbol': 'CMS'
+},
+'current': {
+  'Adj Close': 59.98,
+  'Change Amount': 0.41,
+  'Change Rate': 0.01,
+  'Close': 59.98,
+  'Date': '2024-04-01',
+  'Day Range': 0.7,
+  'High': 60.42,
+  'Low': 59.72,
+  'Open': 60.39,
+  'Volume': 1619100
+},
+'history': [
+  {
+    'Adj Close': 64.66,
+    'Change Amount': -0.72,
+    'Change Rate': -0.01,
+    'Close': 68.92,
+    'Date': '2022-03-25',
+    'Day Range': 0.94,
+    'High': 69.05,
+    'Low': 68.11,
+    'Open': 68.2,
+    'Volume': 1706900
+  }
+]
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
-        
+        </div>
+      </article>
+      
 
-        <!-- ===   PriceData Class - History Method - Date Start & Date End Param's === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">history(symbol, date_start, date_end)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `history` method is used to retrieve a 
-                  payload containing all historical
-                  stock price data available for the stock symbol 
-                  passed to the `symbol` parameter.
+      <!-- ===   PriceData Class - History Method - Date Start & Date End Param's === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">history(symbol, date_start, date_end)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `history` method is used to retrieve a 
+                payload containing all historical
+                stock price data available for the stock symbol 
+                passed to the `symbol` parameter.
 
-                  <br><br>
-                  
-                  Passing a date to both the `date_start` 
-                  and the `date_end` parameter
-                  using the 'YYYY-DD-MM' format
-                  will filter the historical data to include
-                  multiple records for the date range
-                  represented by both values.  Values must 
-                  be passed to both the date_start and 
-                  date_end parameter for date ranges to be returned.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                <br><br>
+                
+                Passing a date to both the `date_start` 
+                and the `date_end` parameter
+                using the 'YYYY-DD-MM' format
+                will filter the historical data to include
+                multiple records for the date range
+                represented by both values.  Values must 
+                be passed to both the date_start and 
+                date_end parameter for date ranges to be returned.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.history("SCS", date_start="2021-03-10", date_end="2021-03-14")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 {
-  'info': {
-    'industry': 'Business Equipment & Supplies',
-    'name': 'Steelcase Inc.',
-    'sector': 'Industrials',
-    'symbol': 'SCS'
+'info': {
+  'industry': 'Business Equipment & Supplies',
+  'name': 'Steelcase Inc.',
+  'sector': 'Industrials',
+  'symbol': 'SCS'
+},
+'current': {
+  'Adj Close': 13.03,
+  'Change Amount': 0.09,
+  'Change Rate': 0.01,
+  'Close': 13.03,
+  'Date': '2024-04-01',
+  'Day Range': 0.35,
+  'High': 13.3,
+  'Low': 12.95,
+  'Open': 13.12,
+  'Volume': 1679800
+},
+'history': [
+  {
+    'Adj Close': 14.47,
+    'Change Amount': -0.38,
+    'Change Rate': -0.02,
+    'Close': 16.59,
+    'Date': '2021-03-12',
+    'Day Range': 0.55,
+    'High': 16.71,
+    'Low': 16.16,
+    'Open': 16.21,
+    'Volume': 542400
   },
-  'current': {
-    'Adj Close': 13.03,
-    'Change Amount': 0.09,
-    'Change Rate': 0.01,
-    'Close': 13.03,
-    'Date': '2024-04-01',
-    'Day Range': 0.35,
-    'High': 13.3,
-    'Low': 12.95,
-    'Open': 13.12,
-    'Volume': 1679800
+  {
+    'Adj Close': 14.08,
+    'Change Amount': 0.03,
+    'Change Rate': 0.0,
+    'Close': 16.14,
+    'Date': '2021-03-11',
+    'Day Range': 0.29,
+    'High': 16.23,
+    'Low': 15.94,
+    'Open': 16.17,
+    'Volume': 620200
   },
-  'history': [
-    {
-      'Adj Close': 14.47,
-      'Change Amount': -0.38,
-      'Change Rate': -0.02,
-      'Close': 16.59,
-      'Date': '2021-03-12',
-      'Day Range': 0.55,
-      'High': 16.71,
-      'Low': 16.16,
-      'Open': 16.21,
-      'Volume': 542400
-    },
-    {
-      'Adj Close': 14.08,
-      'Change Amount': 0.03,
-      'Change Rate': 0.0,
-      'Close': 16.14,
-      'Date': '2021-03-11',
-      'Day Range': 0.29,
-      'High': 16.23,
-      'Low': 15.94,
-      'Open': 16.17,
-      'Volume': 620200
-    },
-    {
-      'Adj Close': 14.11,
-      'Change Amount': -0.73,
-      'Change Rate': -0.05,
-      'Close': 16.18,
-      'Date': '2021-03-10',
-      'Day Range': 0.91,
-      'High': 16.22,
-      'Low': 15.31,
-      'Open': 15.45,
-      'Volume': 758800
-    }
-  ]
+  {
+    'Adj Close': 14.11,
+    'Change Amount': -0.73,
+    'Change Rate': -0.05,
+    'Close': 16.18,
+    'Date': '2021-03-10',
+    'Day Range': 0.91,
+    'High': 16.22,
+    'Low': 15.31,
+    'Open': 15.45,
+    'Volume': 758800
+  }
+]
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - Candlestick Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">candlestick(symbol, days)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `candlestick` method is used to
-                  generate a Plotly Candlestick
-                  plot for the most recent total
-                  number of days represented by the
-                  value passed to the `days` parameter.
+      <!-- ===   PriceData Class - Candlestick Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">candlestick(symbol, days)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `candlestick` method is used to
+                generate a Plotly Candlestick
+                plot for the most recent total
+                number of days represented by the
+                value passed to the `days` parameter.
 
-                  <br><br>
+                <br><br>
 
-                  Executing this method will automatically
-                  open the data visualization in the 
-                  default web browser.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                Executing this method will automatically
+                open the data visualization in the 
+                default web browser.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.candlestick("F", 25)
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
+                <h6>Output:</h6>
 
 
-                  <img class="image" alt="Candlestick Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/7de18beb23efa4dd4d7a0ae6efec096aa48ad281/Candlestick%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History.jpg" width="100%" height="100%">
+                <img class="image" alt="Candlestick Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/7de18beb23efa4dd4d7a0ae6efec096aa48ad281/Candlestick%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History.jpg" width="100%" height="100%">
 
 
 
-            </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - Line Method   === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">line(symbol, days, param)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `line` method is used to
-                  generate a Plotly Line plot for the 
-                  most recent total number of days 
-                  represented by the value passed to 
-                  the `days` parameter for the specified 
-                  data column passed to the `param` parameter.
-          
-                  <br><br>
+      <!-- ===   PriceData Class - Line Method   === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">line(symbol, days, param)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `line` method is used to
+                generate a Plotly Line plot for the 
+                most recent total number of days 
+                represented by the value passed to 
+                the `days` parameter for the specified 
+                data column passed to the `param` parameter.
+        
+                <br><br>
 
-                  Executing this method will automatically
-                  open the data visualization in the 
-                  default web browser.
+                Executing this method will automatically
+                open the data visualization in the 
+                default web browser.
 
-                  <br><br>
+                <br><br>
 
-                  <strong>`param` OPTIONS:</strong>
+                <strong>`param` OPTIONS:</strong>
 
-                  <br><br>
-          
-                      - Change Amount
-                      <br>
-                      - Change Rate
-                      <br>
-                      - Day Range
-                      <br>
-                      - Volume
-                      <br>
-                      - Adj Close
-                      <br>
-                      - Close
-                      <br>
-                      - Low
-                      <br>
-                      - High
-                      <br>
-                      - Open
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                <br><br>
+        
+                    - Change Amount
+                    <br>
+                    - Change Rate
+                    <br>
+                    - Day Range
+                    <br>
+                    - Volume
+                    <br>
+                    - Adj Close
+                    <br>
+                    - Close
+                    <br>
+                    - Low
+                    <br>
+                    - High
+                    <br>
+                    - Open
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.line("F", 25, "Close")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
+                <h6>Output:</h6>
 
 
-                  <img class="image" alt="Line Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/fe9df339cd7a1c6b812486756389345f400d6c87/Line%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History%2520-%2520Closing%2520Prices.jpg" width="100%" height="100%">
+                <img class="image" alt="Line Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/fe9df339cd7a1c6b812486756389345f400d6c87/Line%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History%2520-%2520Closing%2520Prices.jpg" width="100%" height="100%">
 
-            </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   PriceData Class - Table Method   === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">table(symbol, days)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `line` method is used to
-                  generate a Plotly Table for the most 
-                  recent total number of days represented by 
-                  the value passed to the `days` parameter.
-          
-                  <br><br>
+      <!-- ===   PriceData Class - Table Method   === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">table(symbol, days)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `line` method is used to
+                generate a Plotly Table for the most 
+                recent total number of days represented by 
+                the value passed to the `days` parameter.
+        
+                <br><br>
 
-                  Executing this method will automatically
-                  open the data visualization in the 
-                  default web browser.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                Executing this method will automatically
+                open the data visualization in the 
+                default web browser.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = price_data.table("F", 25)
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
+                <h6>Output:</h6>
 
 
-                  <img class="image" alt="Table Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/1970a59183e59e92f82039cbbd6b0fad6946fefd/Table%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History.jpg" width="100%" height="100%">
+                <img class="image" alt="Table Plot" src="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/1970a59183e59e92f82039cbbd6b0fad6946fefd/Table%2520Plot%2520-%2520F%2520-%252025%2520Day%2520History.jpg" width="100%" height="100%">
 
-            </div>
           </div>
-        </article>
-
-
-      </section>
-
-
-      <!-- ===   FinInfo Class   === -->
-      <section>
-
-        <div class="hr">
-          <hr id="top-div" class="uk-divider-icon">
         </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Description  === -->
-        <article>
-          <div id="single-card-wide-dark" class="card-container">
-            <div class="uk-card uk-card-default uk-card uk-card-body">
-              <h2 class="uk-card-title">FinInfo Class</h2>
+    </section>
+
+
+    <!-- ===   FinInfo Class   === -->
+    <section>
+
+      <div class="hr">
+        <hr id="top-div" class="uk-divider-icon">
+      </div>
+
+
+      <!-- ===   FinInfo Class - Description  === -->
+      <article>
+        <div id="single-card-wide-dark" class="card-container">
+          <div class="uk-card uk-card-default uk-card uk-card-body">
+            <h2 class="uk-card-title">FinInfo Class</h2>
+            <h4>
+              The FinInfo class provides access to the metadata catalog 
+              used for for referencing equities, stock symbols, sectors, 
+              and industry information.
+              
+              <br><br>
+              <strong>THE FOLLOWING APPLIES TO ALL FinInfo METHODS:</strong>
+              <br><br>
+              If the value is set to `False`
+              for the `payload` parameter, this method
+              will `pretty print` the requested data omitting
+              a return value.  Otherwise, the value assigned to the
+              `payload` parameter is set to `True` by default, and
+              the method will return a data payload.
+            </h4>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ===   FinInfo Class - Import & Create Class Instance  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">Import Quick Fin & Create a FinInfo Class Instance</h1>
+            </div>
+            <div id="card-body-text">
               <h4>
-                The FinInfo class provides access to the metadata catalog 
-                used for for referencing equities, stock symbols, sectors, 
-                and industry information.
-                
+                Once an instance of the FinInfo class has been created, it can be used anywhere
+                throughout a python module.  At a minimum, this only needs to be done once.
                 <br><br>
-                <strong>THE FOLLOWING APPLIES TO ALL FinInfo METHODS:</strong>
-                <br><br>
-                If the value is set to `False`
-                for the `payload` parameter, this method
-                will `pretty print` the requested data omitting
-                a return value.  Otherwise, the value assigned to the
-                `payload` parameter is set to `True` by default, and
-                the method will return a data payload.
+                Import Quick Fin and create an instance of the FinInfo class: 
               </h4>
             </div>
-          </div>
-        </article>
-
-
-        <!-- ===   FinInfo Class - Import & Create Class Instance  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">Import Quick Fin & Create a FinInfo Class Instance</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  Once an instance of the FinInfo class has been created, it can be used anywhere
-                  throughout a python module.  At a minimum, this only needs to be done once.
-                  <br><br>
-                  Import Quick Fin and create an instance of the FinInfo class: 
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+            <div id="code-group-container" class="card-container">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 from quickfin import *
 
 fin_info = FinInfo()
 </pre>
-                </div>
               </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - FinInfo Method  === -->
-        <article>
-          <div id="single-card-wide-white" class="card-container">
-            <div class="uk-card uk-card-default uk-card uk-card-body">
-              <h2 class="uk-card-title">FinInfo Methods</h2>
+      <!-- ===   FinInfo Class - FinInfo Method  === -->
+      <article>
+        <div id="single-card-wide-white" class="card-container">
+          <div class="uk-card uk-card-default uk-card uk-card-body">
+            <h2 class="uk-card-title">FinInfo Methods</h2>
+            <h4>
+              The following examples provide brief descriptions for each 
+              method available in the `FinInfo` class and will utilize the class instance
+              assigned to the `fin_info` variable from the example above.
+            </h4>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ===   FinInfo Class - Equity Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">equity(symbol, payload=True)</h1>
+            </div>
+            <div id="card-body-text">
               <h4>
-                The following examples provide brief descriptions for each 
-                method available in the `FinInfo` class and will utilize the class instance
-                assigned to the `fin_info` variable from the example above.
+                The `equity` method is used to retrieve a data object containing the 
+                symbol, company name, sector, and industry for the stock symbol 
+                passed to the `symbol` parameter.
               </h4>
             </div>
-          </div>
-        </article>
+            <div id="code-group-container" class="card-container">
 
-
-        <!-- ===   FinInfo Class - Equity Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">equity(symbol, payload=True)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `equity` method is used to retrieve a data object containing the 
-                  symbol, company name, sector, and industry for the stock symbol 
-                  passed to the `symbol` parameter.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
-
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.equity("IBM")
 
@@ -1456,490 +1456,490 @@ print(type(data)) # Print Python data type
 
 print(data) # Print object assigned to `data` variable
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 &#60;class 'dict'&#62;
 
 {
- 'industry': 'Information Technology Services',
- 'name': 'International Business Machines Corporation',
- 'sector': 'Technology',
- 'symbol': 'IBM'
+'industry': 'Information Technology Services',
+'name': 'International Business Machines Corporation',
+'sector': 'Technology',
+'symbol': 'IBM'
 }
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Equities Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">equities(payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `equities` method is used to retrieve a data 
-                  payload containing the symbol, company name,
-                  sector, and industry for all equities included in the
-                  metadata catalog.
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
+      <!-- ===   FinInfo Class - Equities Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">equities(payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `equities` method is used to retrieve a data 
+                payload containing the symbol, company name,
+                sector, and industry for all equities included in the
+                metadata catalog.
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
 
-                  An array of objects.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                An array of objects.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.equities()
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  {
-    'industry': 'Diagnostics & Research',
-    'name': 'Agilent Technologies, Inc.',
-    'sector': 'Healthcare',
-    'symbol': 'A'},
-  {
-    'industry': 'Aluminum',
-    'name': 'Alcoa Corporation',
-    'sector': 'Basic Materials',
-    'symbol': 'AA'
-  },
-  {
-    'industry': 'Education & Training Services',
-    'name': 'ATA Creativity Global',
-    'sector': 'Consumer Defensive',
-    'symbol': 'AACG'
-  },
-  ---  snip  ---
+{
+  'industry': 'Diagnostics & Research',
+  'name': 'Agilent Technologies, Inc.',
+  'sector': 'Healthcare',
+  'symbol': 'A'},
+{
+  'industry': 'Aluminum',
+  'name': 'Alcoa Corporation',
+  'sector': 'Basic Materials',
+  'symbol': 'AA'
+},
+{
+  'industry': 'Education & Training Services',
+  'name': 'ATA Creativity Global',
+  'sector': 'Consumer Defensive',
+  'symbol': 'AACG'
+},
+---  snip  ---
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Industries Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">industries(payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `industries` method is used to retrieve a 
-                  data payload containing a list of all industries available 
-                  in the metadata catalog.
+      <!-- ===   FinInfo Class - Industries Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">industries(payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `industries` method is used to retrieve a 
+                data payload containing a list of all industries available 
+                in the metadata catalog.
 
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of strings.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of strings.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.industries()
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  'Diagnostics & Research',
-  'Aluminum',
-  'Education & Training Services',
-  'Uncategorized',
-  'Shell Companies',
-  'Farm Products',
-  'Insurance - Life',
-  'Rental & Leasing Services',
-  'Communication Equipment',
-  'Building Products & Equipment',
-  'Specialty Retail',
-  'Consumer Electronics',
-  'REIT - Diversified',
-  'Asset Management',
-  ---  snip  ---
+'Diagnostics & Research',
+'Aluminum',
+'Education & Training Services',
+'Uncategorized',
+'Shell Companies',
+'Farm Products',
+'Insurance - Life',
+'Rental & Leasing Services',
+'Communication Equipment',
+'Building Products & Equipment',
+'Specialty Retail',
+'Consumer Electronics',
+'REIT - Diversified',
+'Asset Management',
+---  snip  ---
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Sectors Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">sectors(payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `sectors` method is used to retrieve a
-                  data payload containing a list of all sectors 
-                  available in the metadata catalog.
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of strings.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Sectors Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">sectors(payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `sectors` method is used to retrieve a
+                data payload containing a list of all sectors 
+                available in the metadata catalog.
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of strings.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.sectors()
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  'Healthcare',
-  'Basic Materials',
-  'Consumer Defensive',
-  'Uncategorized',
-  'Financial Services',
-  'Industrials',
-  'Technology',
-  'Consumer Cyclical',
-  'Real Estate',
-  'Communication Services',
-  'Energy',
-  'Utilities'
+'Healthcare',
+'Basic Materials',
+'Consumer Defensive',
+'Uncategorized',
+'Financial Services',
+'Industrials',
+'Technology',
+'Consumer Cyclical',
+'Real Estate',
+'Communication Services',
+'Energy',
+'Utilities'
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Sector Industries Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">sector_industries(sector)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `sector_industries` method is used to retrieve a
-                  data payload containing a list of all industries
-                  belonging to the sector passed to the `sector` parameter. 
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of strings.
-          
-                  By default, the return value will include an 
-                  object containing all sectors and associated industries.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Sector Industries Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">sector_industries(sector)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `sector_industries` method is used to retrieve a
+                data payload containing a list of all industries
+                belonging to the sector passed to the `sector` parameter. 
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of strings.
+        
+                By default, the return value will include an 
+                object containing all sectors and associated industries.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.sector_industries("technology")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  'Communication Equipment',
-  'Consumer Electronics',
-  'Software - Infrastructure',
-  'Semiconductor Equipment & Materials',
-  'Information Technology Services',
-  'Software - Application',
-  'Semiconductors',
-  'Computer Hardware',
-  'Electronic Components',
-  'Solar',
-  'Electronics & Computer Distribution',
-  'Scientific & Technical Instruments'
+'Communication Equipment',
+'Consumer Electronics',
+'Software - Infrastructure',
+'Semiconductor Equipment & Materials',
+'Information Technology Services',
+'Software - Application',
+'Semiconductors',
+'Computer Hardware',
+'Electronic Components',
+'Solar',
+'Electronics & Computer Distribution',
+'Scientific & Technical Instruments'
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Sector Equities Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">sector_equities(sector, payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `sector_industries` method is used to retrieve a
-                  data payload containing a list of all equities belonging 
-                  to the sector passed to the `sector` parameter. 
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of objects.
-          
-                  By default, the return value will include an 
-                  object containing all sectors and associated 
-                  equity data.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Sector Equities Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">sector_equities(sector, payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `sector_industries` method is used to retrieve a
+                data payload containing a list of all equities belonging 
+                to the sector passed to the `sector` parameter. 
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of objects.
+        
+                By default, the return value will include an 
+                object containing all sectors and associated 
+                equity data.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.sector_equities("healthcare")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  {
-    'industry': 'Diagnostics & Research',
-    'name': 'Agilent Technologies, Inc.',
-    'sector': 'Healthcare',
-    'symbol': 'A'
-  },
-  {
-    'industry': 'Drug Manufacturers - General',
-    'name': 'AbbVie Inc.',
-    'sector': 'Healthcare',
-    'symbol': 'ABBV'
-  },
-  {
-    'industry': 'Biotechnology',
-    'name': 'AbCellera Biologics Inc.',
-    'sector': 'Healthcare',
-    'symbol': 'ABCL'
-  },
-  ---  snip  ---
+{
+  'industry': 'Diagnostics & Research',
+  'name': 'Agilent Technologies, Inc.',
+  'sector': 'Healthcare',
+  'symbol': 'A'
+},
+{
+  'industry': 'Drug Manufacturers - General',
+  'name': 'AbbVie Inc.',
+  'sector': 'Healthcare',
+  'symbol': 'ABBV'
+},
+{
+  'industry': 'Biotechnology',
+  'name': 'AbCellera Biologics Inc.',
+  'sector': 'Healthcare',
+  'symbol': 'ABCL'
+},
+---  snip  ---
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Industry Equities Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">industry_equities(industry, payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `industry_industries` method is used to retrieve a 
-                  data payload containing a list of all equities belonging 
-                  to the industry passed to the `industry` parameter.
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of objects.
-          
-                  By default, the return value will include an 
-                  object containing all industries and associated 
-                  equity data.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Industry Equities Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">industry_equities(industry, payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `industry_industries` method is used to retrieve a 
+                data payload containing a list of all equities belonging 
+                to the industry passed to the `industry` parameter.
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of objects.
+        
+                By default, the return value will include an 
+                object containing all industries and associated 
+                equity data.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.industry_equities("farm products")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  {
-    'industry': 'Farm Products',
-    'name': 'African Agriculture Holdings Inc.',
-    'sector': 'Consumer Defensive',
-    'symbol': 'AAGRW'},
-  {
-    'industry': 'Farm Products',
-    'name': 'Archer-Daniels-Midland Company',
-    'sector': 'Consumer Defensive',
-    'symbol': 'ADM'
-  },
-  {
-    'industry': 'Farm Products',
-    'name': 'Forafric Global PLC',
-    'sector': 'Consumer Defensive',
-    'symbol': 'AFRIW'
-  }
-  ---  snip  ---
+{
+  'industry': 'Farm Products',
+  'name': 'African Agriculture Holdings Inc.',
+  'sector': 'Consumer Defensive',
+  'symbol': 'AAGRW'},
+{
+  'industry': 'Farm Products',
+  'name': 'Archer-Daniels-Midland Company',
+  'sector': 'Consumer Defensive',
+  'symbol': 'ADM'
+},
+{
+  'industry': 'Farm Products',
+  'name': 'Forafric Global PLC',
+  'sector': 'Consumer Defensive',
+  'symbol': 'AFRIW'
+}
+---  snip  ---
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Symbols Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">symbols(payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `symbol` method is used to retrieve a 
-                  data payload containing a list of all stock symbols 
-                  available in the metadata catalog. 
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of strings.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Symbols Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">symbols(payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `symbol` method is used to retrieve a 
+                data payload containing a list of all stock symbols 
+                available in the metadata catalog. 
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of strings.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.symbols()
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  'A', 
-  'AA', 
-  'AACG', 
-  'AACT-WT', 
-  'AACT', 
-  'AAGRW', 
-  'AAME', 
-  'AAN',
-  ---  snip  ---
+'A', 
+'AA', 
+'AACG', 
+'AACT-WT', 
+'AACT', 
+'AAGRW', 
+'AAME', 
+'AAN',
+---  snip  ---
 ]
 
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Sector Symbols Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">sector_symbols(sector, payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `sector_symbols` method is used to retrieve a 
-                  data payload containing a list of all stock 
-                  symbols belonging to the sector passed to the 
-                  `sector` parameter available in the metadata catalog. 
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
+      <!-- ===   FinInfo Class - Sector Symbols Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">sector_symbols(sector, payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `sector_symbols` method is used to retrieve a 
+                data payload containing a list of all stock 
+                symbols belonging to the sector passed to the 
+                `sector` parameter available in the metadata catalog. 
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
 
-                  An array of strings.
-          
-                  By default, the return value will include an 
-                  object containing all sectors and associated 
-                  symbols.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+                An array of strings.
+        
+                By default, the return value will include an 
+                object containing all sectors and associated 
+                symbols.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.sector_symbols("communication services")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
 'ABLV', 
@@ -1954,92 +1954,92 @@ print(data)
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-        <!-- ===   FinInfo Class - Industry Symbols Method  === -->
-        <article>
-          <div id="code-group">
-            <div id="code-group-header-container" class="card-container">
-              <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
-                <h1 id="code-group-header-text">industry_symbols(industry, payload)</h1>
-              </div>
-              <div id="card-body-text">
-                <h4>
-                  The `industry_symbols` method is used to retrieve a
-                  data payload of all stock symbols belonging to the
-                  industry passed to the `industry` parameter
-                  available in the metadata catalog. 
-          
-                  <br><br>
-                  <strong>PAYLOAD CONTENTS:</strong>
-                  <br><br>
-          
-                  An array of strings.
-          
-                  By default, the return value will include an 
-                  object containing all industries and associated 
-                  symbols.
-                </h4>
-              </div>
-              <div id="code-group-container" class="card-container">
+      <!-- ===   FinInfo Class - Industry Symbols Method  === -->
+      <article>
+        <div id="code-group">
+          <div id="code-group-header-container" class="card-container">
+            <div id="code-header" class="uk-card uk-card-default uk-card uk-card-body">
+              <h1 id="code-group-header-text">industry_symbols(industry, payload)</h1>
+            </div>
+            <div id="card-body-text">
+              <h4>
+                The `industry_symbols` method is used to retrieve a
+                data payload of all stock symbols belonging to the
+                industry passed to the `industry` parameter
+                available in the metadata catalog. 
+        
+                <br><br>
+                <strong>PAYLOAD CONTENTS:</strong>
+                <br><br>
+        
+                An array of strings.
+        
+                By default, the return value will include an 
+                object containing all industries and associated 
+                symbols.
+              </h4>
+            </div>
+            <div id="code-group-container" class="card-container">
 
-                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+              <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 data = fin_info.industry_symbols("electronic components")
 
 print(data)
 </pre>
-                </div>
+              </div>
 
 
-                  <h6>Output:</h6>
-                  <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
+                <h6>Output:</h6>
+                <div id="code-card" class="uk-card uk-card-default uk-card uk-card-body">
 <pre>
 [
-  'ALNT', 
-  'BELFA', 
-  'CLS', 
-  'CTS', 
-  'DAKT', 
-  'DSWL', 
-  'ELTK', 
-  'FLEX',
-  ---  snip  ---  
+'ALNT', 
+'BELFA', 
+'CLS', 
+'CTS', 
+'DAKT', 
+'DSWL', 
+'ELTK', 
+'FLEX',
+---  snip  ---  
 ]
 </pre>
 
-              </div>
             </div>
           </div>
-        </article>
+        </div>
+      </article>
 
 
-      </section>
+    </section>
 
 
-      <footer>
-        <nav id="footer"  class="uk-navbar-container" uk-sticky="position: bottom">
-          <div class="uk-container">
-            <div uk-navbar>
+    <footer>
+      <nav id="footer"  class="uk-navbar-container" uk-sticky="position: bottom">
+        <div class="uk-container">
+          <div uk-navbar>
+            <div class="uk-navbar-center">
+
               <div class="uk-navbar-center">
 
-                <div class="uk-navbar-center">
-
-                  <a class="uk-link-text" href="https://www.techbyderek.com" rel="noopener" target="_blank">
-                    <img class="logo" alt="www.techbyderek.com" src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/f579d38e59a2a1c6b1ed5d6d33012d624abdc9eb/D%2520LOGO%2520WHITE%2520-%2520360%2520-%2520NO%2520BG.png">
-                  </a>
-
-                </div>
+                <a class="uk-link-text" href="https://www.techbyderek.com" rel="noopener" target="_blank">
+                  <img class="logo" alt="www.techbyderek.com" src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/f579d38e59a2a1c6b1ed5d6d33012d624abdc9eb/D%2520LOGO%2520WHITE%2520-%2520360%2520-%2520NO%2520BG.png">
+                </a>
 
               </div>
+
             </div>
           </div>
-        </nav>
-      </footer>
+        </div>
+      </nav>
+    </footer>
 
     </body>
 </html>
