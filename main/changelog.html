@@ -35,6 +35,12 @@
         margin-bottom: 1.5em;
       }
 
+      .badges {
+        height:1.5em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+      }
+
       nav {
         background-color: rgba(4, 96, 217, 1);
         margin-bottom: 1.5em;
@@ -44,6 +50,10 @@
 
       .uk-navbar-left {
         margin-left:1.5em;
+      }
+
+      .uk-navbar-right {
+        margin-right: 1.5em;
       }
 
       #grid-four {
@@ -534,37 +544,35 @@
   </head>
   <body>
 
-      <header>
-        <nav class="uk-navbar-container-stretch">
-          <div class="uk-container-stretch">
-            <div uk-navbar>
+    <header>
+      <nav class="uk-navbar-container-stretch">
+        <div class="uk-container-stretch">
+          <div uk-navbar>
 
-              <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle" href="#" id="menu-name">
-                  <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
-                </a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/">Home</a></li>
-                    <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
-                    <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
-                    <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/main/changelog.html">Changelog</a></li>
-                  </ul>
-                </div>
+            <div class="uk-navbar-left">
+              <a class="uk-navbar-toggle" href="#" id="menu-name">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+              </a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/">Home</a></li>
+                  <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
+                  <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
+                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/changelog.html">Changelog</a></li>
+                </ul>
               </div>
-
-              <div class="uk-navbar-center">
-                <h1>
-                  <a class="uk-link-text" id="button-link-logo" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank">
-                    Quick Fin
-                  </a>
-                </h1>
-              </div>
-
             </div>
+
+            <div class="uk-navbar-center">
+              <a alt="GitHub Repo" href="https://github.com/REPNOT/quickfin" rel="noopener" target="_blank"><img class="badges" alt="GitHub Repo" src="https://badgen.net/badge/repo/quickfin/black?icon=github" height="24"></a>
+              <h1>Quick Fin</h1>
+              <a alt="PyPi version" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank"><img class="badges" src="https://badge.fury.io/py/quickfin.svg" alt="PyPI version" height="24"></a>
+            </div>
+
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
       <h1 id="main-title">Changelog</h1>
 
