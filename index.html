@@ -22,7 +22,6 @@
 
       .icon-text-container {
         margin-top:.5em;
-
       }
 
       svg {
@@ -31,11 +30,6 @@
 
       svg:hover {
         fill:#000000;
-      }
-
-      .icon-container {
-        text-decoration: none;
-        text-decoration-line: none;
       }
 
       .icon-grid {
@@ -57,7 +51,7 @@
 
       .icon-text {
         color:#ffffff;
-        font-size: 25px;
+        font-size: 22.5px;
         font-weight: 600;
       }
 
@@ -103,25 +97,40 @@
         max-width: 1400px;
       }
 
-      .menu-links:link {
-        font-weight: bold;
-        font-size: 20px;
-        color:#000000;
-      }
-
-      .menu-links:hover {
-        font-weight: bold;
-        font-size: 20px;
-        color:#000000;
-      }
-
       .menu-links-active {
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: underline;
+        font-weight: 600;
+        font-size: 17.5px;
       }
 
       .menu-links-active:link {
+        font-weight: 600;
+        font-size: 17.5px;
+      }
+
+      .menu-links-active:visited {
+        font-weight: 600;
+        font-size: 17.5px;
+      }
+
+      .menu-links {
+        font-weight: bold;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .menu-links:visited {
+        font-weight: bold;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .menu-links:link {
+        font-weight: bold;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      /* .menu-links-active:link {
         font-weight: bold;
         font-size: 20px;
         text-decoration: underline;
@@ -131,7 +140,7 @@
         font-weight: bold;
         font-size: 20px;
         text-decoration: underline;
-      }
+      } */
 
       #menu-name {
         font-weight: 600;
@@ -596,8 +605,8 @@
               </a>
               <div class="uk-navbar-dropdown">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/">Home</a></li>
-                  <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
+                  <li class="uk-active"><a class="menu-links-active" href="https://quickfin.techbyderek.com/">Home</a></li>
+                  <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/examples.html">Examples</a></li>
                   <li class="uk-link"><a class="menu-links" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">Data</a></li>
                   <li class="uk-link"><a class="menu-links" href="https://quickfin.techbyderek.com/main/changelog.html">Changelog</a></li>
                 </ul>
@@ -605,10 +614,7 @@
             </div>
 
             <div class="uk-navbar-center">
-
-              <!-- <a alt="GitHub Repo" href="https://github.com/REPNOT/quickfin" rel="noopener" target="_blank"><img class="badges" alt="GitHub Repo" src="https://badgen.net/badge/repo/quickfin/black?icon=github" height="24"></a> -->
               <h1>Quick Fin</h1>
-              <!-- <a alt="PyPi version" href="https://pypi.org/project/quickfin/" rel="noopener" target="_blank"><img class="badges" src="https://badge.fury.io/py/quickfin.svg" alt="PyPI version" height="24"></a> -->
             </div>
 
           </div>
@@ -634,7 +640,44 @@
                 catalog for referencing equities, stock symbols, sector,
                 and industry information.
               </h4>
-
+              <div class="icon-grid" uk-grid>
+                <div class="icon-container">
+                  <div class="icon-link">
+                    <a alt="Icon Link" href="https://gist.githubusercontent.com/REPNOT/6bffda0dd727d63a0bd727d4ff1c890a/raw/ec1ea323068b45739ddd595dfab897cc5f7c6487/fin_data.json" rel="noopener" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" class="bi bi-filetype-json" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM4.151 15.29a1.2 1.2 0 0 1-.111-.449h.764a.58.58 0 0 0 .255.384q.105.073.25.114.142.041.319.041.245 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .084-.29.39.39 0 0 0-.152-.326q-.152-.12-.463-.193l-.618-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.352-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.192-.272.528-.422.337-.15.777-.149.456 0 .779.152.326.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.246-.181.9.9 0 0 0-.37-.068q-.324 0-.512.152a.47.47 0 0 0-.185.384q0 .18.144.3a1 1 0 0 0 .404.175l.621.143q.326.075.566.211a1 1 0 0 1 .375.358q.135.222.135.56 0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033a1.3 1.3 0 0 1-.082-.466h.764a.6.6 0 0 0 .074.27.5.5 0 0 0 .454.246q.285 0 .422-.164.137-.165.137-.466v-2.745h.791v2.725q0 .66-.357 1.005-.355.345-.985.345a1.6 1.6 0 0 1-.568-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39m9.091-1.585v.522q0 .384-.117.641a.86.86 0 0 1-.322.387.9.9 0 0 1-.47.126.9.9 0 0 1-.47-.126.87.87 0 0 1-.32-.387 1.55 1.55 0 0 1-.117-.641v-.522q0-.386.117-.641a.87.87 0 0 1 .32-.387.87.87 0 0 1 .47-.129q.265 0 .47.129a.86.86 0 0 1 .322.387q.117.255.117.641m.803.519v-.513q0-.565-.205-.973a1.46 1.46 0 0 0-.59-.63q-.38-.22-.916-.22-.534 0-.92.22a1.44 1.44 0 0 0-.589.628q-.205.407-.205.975v.513q0 .562.205.973.205.407.589.626.386.217.92.217.536 0 .917-.217.384-.22.589-.626.204-.41.205-.973m1.29-.935v2.675h-.746v-3.999h.662l1.752 2.66h.032v-2.66h.75v4h-.656l-1.761-2.676z"/>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="icon-text-container">
+                    <span class="icon-text">Data Catalog</span>
+                  </div>
+                </div>
+                <div class="icon-container">
+                  <div class="icon-link">
+                    <a alt="Icon Link" href="https://quickfin.techbyderek.com/main/examples.html">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" class="bi bi-filetype-json" viewBox="0 0 16 16">
+                        <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"/>
+                      </svg>
+                    </a>
+                    <div class="icon-text-container">
+                      <span class="icon-text">Code Examples</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icon-container">
+                  <div class="icon-link">
+                    <a alt="Icon Link" href="https://github.com/REPNOT/quickfin" rel="noopener" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" class="bi bi-filetype-json" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                      </svg>
+                    </a>
+                    <div class="icon-text-container">
+                      <span class="icon-text">GitHub Repo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </article>
